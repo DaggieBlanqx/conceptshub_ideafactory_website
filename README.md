@@ -1,5 +1,5 @@
 # conceptshub_ideafactory_website
 
-mobile max 992px
-
-tablet max 768px
+desktop max 1024px
+tablet max 992px
+mobile max 768px

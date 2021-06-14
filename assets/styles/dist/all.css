@@ -1,0 +1,31 @@
+/*
+Start: Common presets
+*/
+/*
+Start: Common presets
+*/
+/*
+Start: home_page
+*/
+@media (max-width: 768px) {
+  .home_page * {
+    border: solid 5px purple;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .home_page * {
+    border: solid 5px green;
+  }
+}
+
+@media (min-width: 993px) {
+  .home_page * {
+    border: solid 5px violet;
+  }
+}
+
+/*
+End: home_page
+*/
+/*# sourceMappingURL=all.css.map */
