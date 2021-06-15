@@ -1,6 +1,13 @@
 /*
 Start: Common presets
 */
+:root {
+  --lightBlue_chub: #36bef6;
+  --darkBlue_chub: #001018;
+  --white_chub: #ffffff;
+}
+
+/*Utility classes*/
 /*
 Start: Common presets
 */

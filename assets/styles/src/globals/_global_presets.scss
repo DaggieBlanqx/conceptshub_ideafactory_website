@@ -4,3 +4,11 @@
 // tablet max 992px
 // mobile max 768px
 $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
+:root {
+    --lightBlue_chub: #36bef6;
+    --darkBlue_chub: #001018;
+    --white_chub: #ffffff;
+}
+
+
+/*Utility classes*/
