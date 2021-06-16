@@ -6,7 +6,8 @@ footer {
     display: flex;
     flex-direction: column;
     .firstRow {
-        .contactUs {
+        .contactUs {}
+        .findUs {
             display: grid;
             // grid-template-rows: repeat(2, 1fr);
             // grid-template-columns: repeat(auto, 1fr);
@@ -280,7 +281,7 @@ footer {
     footer {
         border: solid 5px green;
         .firstRow {
-            .contactUs {
+            .findUs {
                 display: flex;
                 flex-direction: row;
                 align-items: stretch;
@@ -332,7 +333,7 @@ footer {
     footer {
         border: solid 5px violet;
         .firstRow {
-            .contactUs {
+            .findUs {
                 display: flex;
                 flex-direction: row;
                 align-items: stretch;

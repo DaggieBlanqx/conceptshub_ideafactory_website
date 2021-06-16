@@ -88,12 +88,12 @@ Start: home_page
           flex-direction: column;
 }
 
-.template_page footer .firstRow .contactUs {
+.template_page footer .firstRow .findUs {
   display: -ms-grid;
   display: grid;
 }
 
-.template_page footer .firstRow .contactUs figure {
+.template_page footer .firstRow .findUs figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,20 +111,20 @@ Start: home_page
   padding: 80px 0;
 }
 
-.template_page footer .firstRow .contactUs figure:nth-child(odd) {
+.template_page footer .firstRow .findUs figure:nth-child(odd) {
   background-color: var(--almostDarkBlue_chub);
 }
 
-.template_page footer .firstRow .contactUs figure:nth-child(even) {
+.template_page footer .firstRow .findUs figure:nth-child(even) {
   background-color: var(--almostLightBlue_chub);
 }
 
-.template_page footer .firstRow .contactUs figure img.cityThumbnail {
+.template_page footer .firstRow .findUs figure img.cityThumbnail {
   height: 100px;
   width: 105.5px;
 }
 
-.template_page footer .firstRow .contactUs figure .city {
+.template_page footer .firstRow .findUs figure .city {
   /* Font & Text */
   font-family: "Libre Baskerville", serif;
   font-size: 25px;
@@ -144,7 +144,7 @@ Start: home_page
   color: white;
 }
 
-.template_page footer .firstRow .contactUs figure .street {
+.template_page footer .firstRow .findUs figure .street {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -164,7 +164,7 @@ Start: home_page
   color: white;
 }
 
-.template_page footer .firstRow .contactUs figure .location {
+.template_page footer .firstRow .findUs figure .location {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -184,7 +184,7 @@ Start: home_page
   color: white;
 }
 
-.template_page footer .firstRow .contactUs figure .phone {
+.template_page footer .firstRow .findUs figure .phone {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -204,7 +204,7 @@ Start: home_page
   color: #35bdf6;
 }
 
-.template_page footer .firstRow .contactUs figure .email {
+.template_page footer .firstRow .findUs figure .email {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -524,7 +524,7 @@ Start: home_page
   .template_page footer {
     border: solid 5px green;
   }
-  .template_page footer .firstRow .contactUs {
+  .template_page footer .firstRow .findUs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -536,7 +536,7 @@ Start: home_page
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  .template_page footer .firstRow .contactUs figure {
+  .template_page footer .firstRow .findUs figure {
     height: 277.5px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -587,7 +587,7 @@ Start: home_page
   .template_page footer {
     border: solid 5px violet;
   }
-  .template_page footer .firstRow .contactUs {
+  .template_page footer .firstRow .findUs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -599,7 +599,7 @@ Start: home_page
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  .template_page footer .firstRow .contactUs figure {
+  .template_page footer .firstRow .findUs figure {
     height: 277.5px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
