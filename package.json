@@ -1,0 +1,9 @@
+{
+  "name": "ConceptsHub_Ideafactory_Website",
+  "version": "1.0.0",
+  "description": "A website for Conceptshub. It will showcase who they are, what they do and lots more.",
+  "main": "index.js",
+  "repository": "https://github.com/DaggieBlanqx/conceptshub_ideafactory_website.git",
+  "author": "Daggieblanqx",
+  "license": "Private"
+}
