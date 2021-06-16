@@ -2,3 +2,20 @@
     width: 80%;
     margin: 0 auto;
 }
+
+@mixin title_footerMenu {
+    font-family: "Gotham A", "Gotham B";
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 14.3px;
+    text-align: start;
+    text-indent: 0px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    color: var(--white_chub);
+}
