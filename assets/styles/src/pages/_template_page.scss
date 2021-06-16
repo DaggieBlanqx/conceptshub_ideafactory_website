@@ -107,6 +107,7 @@ footer {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 35px);
             grid-template-areas: "credits credits""creator creator";
+            gap: 1rem;
             padding-bottom: 75px;
             font-family: "Gotham A", "Gotham B";
             font-size: 12px;
@@ -125,7 +126,7 @@ footer {
                 justify-self: center;
                 align-self: center;
                 text-align: center;
-                height: 25px;
+                // height: 25px;
             }
             .credits {
                 grid-area: credits;
@@ -178,7 +179,7 @@ footer {
                         vertical-align: baseline;
                         white-space: normal;
                         word-spacing: 0px;
-                        height: 14px;
+                        // height: 14px;
                     }
                 }
             }

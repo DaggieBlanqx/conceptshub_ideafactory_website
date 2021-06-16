@@ -230,6 +230,7 @@ Start: home_page
   -ms-grid-rows: (35px)[2];
       grid-template-rows: repeat(2, 35px);
       grid-template-areas: "credits credits" "creator creator";
+  gap: 1rem;
   padding-bottom: 75px;
   font-family: "Gotham A", "Gotham B";
   font-size: 12px;
@@ -253,7 +254,6 @@ Start: home_page
       -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
-  height: 25px;
 }
 
 .template_page footer .secondRow .credits_and_creator .credits {
@@ -327,7 +327,6 @@ Start: home_page
   vertical-align: baseline;
   white-space: normal;
   word-spacing: 0px;
-  height: 14px;
 }
 
 .template_page footer .thirdRow .legal_and_social > .social {
