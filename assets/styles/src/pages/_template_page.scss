@@ -88,16 +88,16 @@ footer {
         }
 
         .lowerMenu {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            flex-flow:row wrap;
 
-            // display: grid;
-            // grid-template-rows: repeat(auto,minmax(232px,));
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(auto, auto-fit);
+            grid-gap: 50px;
+
+
 
             &>div {
-                width: 355px;
+                max-width: 727px;
 
                 &>h3 {
                     font-family: "Gotham A", "Gotham B";
@@ -197,8 +197,11 @@ footer {
         .legal_and_social {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            // grid-template-rows: repeat(2, 60px);
-            grid-template-rows: repeat(2, minmax(60px, 90px));
+            // grid-template-rows: repeat(2, minmax(30px, 60px));
+            // grid-template-rows: repeat(2, minmax(60px, 90px));
+            // grid-template-rows: repeat(2,60px);
+            // grid-template-rows: repeat(2, 30px);
+            grid-template-rows: repeat(2, auto-fit);
             grid-template-areas:
                 "legal legal"
                 "social social"
@@ -209,6 +212,10 @@ footer {
             padding: 0;
             margin: 0;
 
+            &>ul {
+                height: 60px;
+            }
+
             &>.legal {
                 padding: 0 var(--bothVerticalSidesBodyPadding);
                 grid-area: legal;
@@ -216,7 +223,7 @@ footer {
                 display: flex;
                 flex-wrap: wrap;
                 column-gap: 1rem;
-                height: 90px;
+
                 align-items: center;
 
                 &>li {
@@ -296,22 +303,123 @@ footer {
         .secondRow {
 
             .credits_and_creator {
-                grid-template-areas: "credits creator""credits creator";
+                grid-template-areas:
+                    "credits creator"
+                    "credits creator";
+
+                span {
+
+                    text-align: unset;
+                }
+
+                .credits {
+                    justify-self: start;
+                }
+
+                .creator {
+                    justify-self: end;
+                }
+
+            }
+
+
+            .lowerMenu {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(auto, auto-fit);
+
+                &>div {
+                    max-width: 355px; //tablet
+
+                }
             }
 
         }
 
+        .thirdRow {
+            grid-template-rows: repeat(2, 30px);
+
+            .legal_and_social {
+                grid-template-areas:
+                    "legal social"
+                    "legal social"
+                ;
+            }
+        }
 
     }
 }
+
+
+
 
 @include media(">tablet") {
 
     //every device bigger than tablet
     footer {
         border: solid 5px violet;
+
+        .secondRow {
+
+            .footerLogo {
+                @include containWithin80Percent;
+            }
+
+            .upperMenu {
+                @include containWithin80Percent;
+            }
+
+            .credits_and_creator {
+                @include containWithin80Percent;
+                grid-template-areas:
+                    "credits creator"
+                    "credits creator";
+
+                span {
+
+                    text-align: unset;
+                }
+
+                .credits {
+                    justify-self: start;
+                }
+
+                .creator {
+                    justify-self: end;
+                }
+            }
+
+            .lowerMenu {
+                @include containWithin80Percent;
+
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(auto, auto-fit);
+
+                &>div {
+                    // min-width: 202.5px; //desktop
+                    // min-width: 232.5px;
+                    max-width: 232.5px;
+
+                }
+            }
+
+        }
+
+        .thirdRow {
+            grid-template-rows: repeat(2, 30px);
+
+            .legal_and_social {
+                grid-template-areas:
+                    "legal social"
+                    "legal social";
+
+                .social {
+                    justify-content: flex-start;
+                    gap: 2.5rem;
+                }
+
+            }
+        }
+
+
     }
 }
-
-
-// @include media("<=desktop") {}
