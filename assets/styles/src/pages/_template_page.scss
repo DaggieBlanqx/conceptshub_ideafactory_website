@@ -23,10 +23,16 @@ footer {
             }
         }
         .upperMenu {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
+            // display: flex;
+            // flex-direction: column;
+            // gap: 50px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(auto, auto-fit);
+            grid-gap: 50px;
+            // &>div {
             &>div {
+                max-width: 727px;
                 &>h3 {
                     @include title_footerMenu;
                 }
@@ -140,10 +146,6 @@ footer {
         .legal_and_social {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            // grid-template-rows: repeat(2, minmax(30px, 60px));
-            // grid-template-rows: repeat(2, minmax(60px, 90px));
-            // grid-template-rows: repeat(2,60px);
-            // grid-template-rows: repeat(2, 30px);
             grid-template-rows: repeat(2, auto-fit);
             grid-template-areas: "legal legal" "social social";
             grid-gap: 0;
@@ -234,6 +236,13 @@ footer {
                     justify-self: end;
                 }
             }
+            .upperMenu {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(auto, auto-fit);
+                &>div {
+                    max-width: 355px; //tablet
+                }
+            }
             .lowerMenu {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: repeat(auto, auto-fit);
@@ -261,6 +270,11 @@ footer {
             }
             .upperMenu {
                 @include containWithin80Percent;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(auto, auto-fit);
+                &>div {
+                    max-width: 232.5px;
+                }
             }
             .credits_and_creator {
                 @include containWithin80Percent;
