@@ -63,6 +63,8 @@ Start: Common presets
   --lightBlue_chub: #35bdf6;
   --darkBlue_chub: #102e4e;
   --veryDarkBlue_chub: #001018;
+  --almostLightBlue_chub: #1f5e88;
+  --almostDarkBlue_chub: #06385d;
   --white_chub: #ffffff;
   --leftBodyPadding: clamp(8.75px, 17.5px, 35px);
   --rightBodyPadding: clamp(8.75px, 17.5px, 35px);
@@ -76,6 +78,152 @@ Start: Common presets
 /*
 Start: home_page
 */
+.template_page footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.template_page footer .firstRow .contactUs {
+  display: -ms-grid;
+  display: grid;
+}
+
+.template_page footer .firstRow .contactUs figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 0;
+}
+
+.template_page footer .firstRow .contactUs figure:nth-child(odd) {
+  background-color: var(--almostDarkBlue_chub);
+}
+
+.template_page footer .firstRow .contactUs figure:nth-child(even) {
+  background-color: var(--almostLightBlue_chub);
+}
+
+.template_page footer .firstRow .contactUs figure img.cityThumbnail {
+  height: 100px;
+  width: 105.5px;
+}
+
+.template_page footer .firstRow .contactUs figure .city {
+  /* Font & Text */
+  font-family: "Libre Baskerville", serif;
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 27.5px;
+  -webkit-text-decoration: white;
+          text-decoration: white;
+  text-align: center;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+}
+
+.template_page footer .firstRow .contactUs figure .street {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25px;
+  -webkit-text-decoration: white;
+          text-decoration: white;
+  text-align: center;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+}
+
+.template_page footer .firstRow .contactUs figure .location {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25px;
+  -webkit-text-decoration: white;
+          text-decoration: white;
+  text-align: center;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+}
+
+.template_page footer .firstRow .contactUs figure .phone {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 25px;
+  -webkit-text-decoration: var(--lightBlue_chub);
+          text-decoration: var(--lightBlue_chub);
+  text-align: center;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #35bdf6;
+}
+
+.template_page footer .firstRow .contactUs figure .email {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 25px;
+  -webkit-text-decoration: var(--lightBlue_chub);
+          text-decoration: var(--lightBlue_chub);
+  text-align: center;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #35bdf6;
+}
+
 .template_page footer .secondRow {
   padding: 0 var(--bothVerticalSidesBodyPadding);
   display: -webkit-box;
@@ -376,6 +524,24 @@ Start: home_page
   .template_page footer {
     border: solid 5px green;
   }
+  .template_page footer .firstRow .contactUs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .template_page footer .firstRow .contactUs figure {
+    height: 277.5px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
   .template_page footer .secondRow .credits_and_creator {
         grid-template-areas: "credits creator" "credits creator";
   }
@@ -420,6 +586,24 @@ Start: home_page
 @media (min-width: 993px) {
   .template_page footer {
     border: solid 5px violet;
+  }
+  .template_page footer .firstRow .contactUs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .template_page footer .firstRow .contactUs figure {
+    height: 277.5px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   .template_page footer .secondRow .footerLogo {
     width: 80%;

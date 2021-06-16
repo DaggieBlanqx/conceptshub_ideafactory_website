@@ -3,8 +3,64 @@ header {}
 main {}
 
 footer {
+    display: flex;
+    flex-direction: column;
     .firstRow {
-        .contactUs {}
+        .contactUs {
+            display: grid;
+            // grid-template-rows: repeat(2, 1fr);
+            // grid-template-columns: repeat(auto, 1fr);
+            figure {
+                // max-width: 767px;
+                // height: 277.5px;
+                display: flex;
+                flex-direction: column;
+                gap: .2rem;
+                justify-content: center;
+                align-items: center;
+                padding: 80px 0;
+                &:nth-child(odd) {
+                    background-color: var(--almostDarkBlue_chub);
+                }
+                &:nth-child(even) {
+                    background-color: var(--almostLightBlue_chub);
+                }
+                img.cityThumbnail {
+                    height: 100px;
+                    width: 105.5px;
+                }
+                .city {
+                    /* Font & Text */
+                    font-family: "Libre Baskerville", serif;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: 400;
+                    letter-spacing: -1px;
+                    line-height: 27.5px;
+                    text-decoration: rgb(255, 255, 255);
+                    text-align: center;
+                    text-indent: 0px;
+                    text-transform: none;
+                    vertical-align: baseline;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    color: rgb(255, 255, 255);
+                }
+                .street {
+                    @include street_footer;
+                }
+                .location {
+                    @include street_footer;
+                }
+                .phone {
+                    @include phone_footer;
+                }
+                .email {
+                    @include phone_footer;
+                }
+            }
+        }
     }
     .secondRow {
         padding: 0 var(--bothVerticalSidesBodyPadding);
@@ -223,6 +279,17 @@ footer {
     //every device between phone and tablet
     footer {
         border: solid 5px green;
+        .firstRow {
+            .contactUs {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                figure {
+                    height: 277.5px;
+                    flex: 1;
+                }
+            }
+        }
         .secondRow {
             .credits_and_creator {
                 grid-template-areas: "credits creator" "credits creator";
@@ -264,6 +331,17 @@ footer {
     //every device bigger than tablet
     footer {
         border: solid 5px violet;
+        .firstRow {
+            .contactUs {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                figure {
+                    height: 277.5px;
+                    flex: 1;
+                }
+            }
+        }
         .secondRow {
             .footerLogo {
                 @include containWithin80Percent;

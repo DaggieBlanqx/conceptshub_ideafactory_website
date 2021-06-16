@@ -19,3 +19,41 @@
     word-spacing: 0px;
     color: var(--white_chub);
 }
+
+@mixin street_footer {
+    /* Font & Text */
+    font-family: "Gotham A", "Gotham B";
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 25px;
+    text-decoration: rgb(255, 255, 255);
+    text-align: center;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    color: rgb(255, 255, 255);
+}
+
+@mixin phone_footer {
+    /* Font & Text */
+    font-family: "Gotham A", "Gotham B";
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 25px;
+    text-decoration: var(--lightBlue_chub);
+    text-align: center;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    color: rgb(53, 189, 246);
+}
