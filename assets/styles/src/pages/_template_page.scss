@@ -6,33 +6,26 @@ footer {
     .firstRow {
         .contactUs {}
     }
-
     .secondRow {
         padding: 0 var(--bothVerticalSidesBodyPadding);
         display: flex;
         flex-direction: column;
         gap: 50px;
-
         background-color: #031e32;
         background-image: linear-gradient(to top left, #123458, #071626);
-
         .footerLogo {
             padding-top: 50px;
-
             a {
-
                 img {
                     width: 130px;
                     height: auto;
                 }
             }
         }
-
         .upperMenu {
             display: flex;
             flex-direction: column;
             gap: 50px;
-
             &>div {
                 &>h3 {
                     /* Font & Text */
@@ -51,7 +44,6 @@ footer {
                     word-spacing: 0px;
                     color: var(--white_chub);
                 }
-
                 &>ul {
                     &>li {
                         /* Font & Text */
@@ -69,36 +61,25 @@ footer {
                         white-space: normal;
                         word-spacing: 0px;
                         color: var(--lightBlue_chub);
-
-
                         &>a {
                             color: inherit;
                             transition: .4s cubic-bezier(0.25, .46, .45, .94);
                             text-decoration: none;
-
                             &:hover {
                                 color: var(--white_chub);
                             }
-
                         }
                     }
                 }
-
             }
         }
-
         .lowerMenu {
-
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(auto, auto-fit);
             grid-gap: 50px;
-
-
-
             &>div {
                 max-width: 727px;
-
                 &>h3 {
                     font-family: "Gotham A", "Gotham B";
                     font-size: 13px;
@@ -115,7 +96,6 @@ footer {
                     word-spacing: 0px;
                     color: var(--white_chub);
                 }
-
                 &>ul {
                     &>li {
                         /* Font & Text */
@@ -133,17 +113,13 @@ footer {
                         white-space: normal;
                         word-spacing: 0px;
                         color: var(--lightBlue_chub);
-                        height: 25px;
-
                         &>a {
                             color: inherit;
                             transition: .4s cubic-bezier(0.25, .46, .45, .94);
                             text-decoration: none;
-
                             &:hover {
                                 color: var(--white_chub);
                             }
-
                             &:active {
                                 color: var(--white_chub);
                                 font-weight: 700;
@@ -153,14 +129,12 @@ footer {
                 }
             }
         }
-
         .credits_and_creator {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 35px);
             grid-template-areas: "credits credits""creator creator";
             padding-bottom: 75px;
-
             font-family: "Gotham A", "Gotham B";
             font-size: 12px;
             font-style: normal;
@@ -174,26 +148,21 @@ footer {
             vertical-align: baseline;
             white-space: normal;
             color: var(--white_chub);
-
             span {
                 justify-self: center;
                 align-self: center;
                 text-align: center;
                 height: 25px;
             }
-
             .credits {
                 grid-area: credits;
             }
-
             .creator {
                 grid-area: creator;
             }
         }
     }
-
     .thirdRow {
-
         .legal_and_social {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -202,20 +171,14 @@ footer {
             // grid-template-rows: repeat(2,60px);
             // grid-template-rows: repeat(2, 30px);
             grid-template-rows: repeat(2, auto-fit);
-            grid-template-areas:
-                "legal legal"
-                "social social"
-            ;
+            grid-template-areas: "legal legal" "social social";
             grid-gap: 0;
-
             background-color: red;
             padding: 0;
             margin: 0;
-
             &>ul {
                 height: 60px;
             }
-
             &>.legal {
                 padding: 0 var(--bothVerticalSidesBodyPadding);
                 grid-area: legal;
@@ -223,15 +186,11 @@ footer {
                 display: flex;
                 flex-wrap: wrap;
                 column-gap: 1rem;
-
                 align-items: center;
-
                 &>li {
                     list-style: none;
-
                     &>a {
                         text-decoration: none;
-
                         font-family: "Gotham A", "Gotham B";
                         color: var(--lightBlue_chub);
                         font-size: 11px;
@@ -250,7 +209,6 @@ footer {
                     }
                 }
             }
-
             &>.social {
                 padding: 0 var(--bothVerticalSidesBodyPadding);
                 grid-area: social;
@@ -259,18 +217,13 @@ footer {
                 gap: 1rem;
                 align-items: center;
                 justify-content: space-between;
-
                 &>li {
                     list-style: none;
-
                     &>a {
                         text-decoration: none;
-
                         height: 20px;
                         width: 20px;
-
                         &>i {
-
                             &::before {
                                 color: var(--veryDarkBlue_chub);
                                 font-size: 20px;
@@ -278,16 +231,12 @@ footer {
                         }
                     }
                 }
-
             }
         }
     }
-
-
 }
 
 @include media("<=phone") {
-
     //every device smaller than phone
     footer {
         border: solid 5px purple;
@@ -295,131 +244,83 @@ footer {
 }
 
 @include media(">phone", "<=tablet") {
-
     //every device between phone and tablet
     footer {
         border: solid 5px green;
-
         .secondRow {
-
             .credits_and_creator {
-                grid-template-areas:
-                    "credits creator"
-                    "credits creator";
-
+                grid-template-areas: "credits creator" "credits creator";
                 span {
-
                     text-align: unset;
                 }
-
                 .credits {
                     justify-self: start;
                 }
-
                 .creator {
                     justify-self: end;
                 }
-
             }
-
-
             .lowerMenu {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: repeat(auto, auto-fit);
-
                 &>div {
                     max-width: 355px; //tablet
-
                 }
             }
-
         }
-
         .thirdRow {
             grid-template-rows: repeat(2, 30px);
-
             .legal_and_social {
-                grid-template-areas:
-                    "legal social"
-                    "legal social"
-                ;
+                grid-template-areas: "legal social" "legal social";
             }
         }
-
     }
 }
 
-
-
-
 @include media(">tablet") {
-
     //every device bigger than tablet
     footer {
         border: solid 5px violet;
-
         .secondRow {
-
             .footerLogo {
                 @include containWithin80Percent;
             }
-
             .upperMenu {
                 @include containWithin80Percent;
             }
-
             .credits_and_creator {
                 @include containWithin80Percent;
-                grid-template-areas:
-                    "credits creator"
-                    "credits creator";
-
+                grid-template-areas: "credits creator" "credits creator";
                 span {
-
                     text-align: unset;
                 }
-
                 .credits {
                     justify-self: start;
                 }
-
                 .creator {
                     justify-self: end;
                 }
             }
-
             .lowerMenu {
                 @include containWithin80Percent;
-
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: repeat(auto, auto-fit);
-
                 &>div {
                     // min-width: 202.5px; //desktop
                     // min-width: 232.5px;
                     max-width: 232.5px;
-
                 }
             }
-
         }
-
         .thirdRow {
             grid-template-rows: repeat(2, 30px);
-
             .legal_and_social {
-                grid-template-areas:
-                    "legal social"
-                    "legal social";
-
+                grid-template-areas: "legal social" "legal social";
                 .social {
                     justify-content: flex-start;
                     gap: 2.5rem;
                 }
-
             }
         }
-
-
     }
 }

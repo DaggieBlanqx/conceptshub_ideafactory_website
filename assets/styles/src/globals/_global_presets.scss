@@ -5,16 +5,12 @@
 // tablet max 992px
 // mobile max 768px
 $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
-
 :root {
     //Colors
     --lightBlue_chub: #35bdf6;
     --darkBlue_chub: #102e4e;
     --veryDarkBlue_chub: #001018;
     --white_chub: #ffffff;
-
-
-
     //left and right padding for all sections
     --leftBodyPadding: clamp(8.75px, 17.5px, 35px);
     --rightBodyPadding: clamp(8.75px, 17.5px, 35px);
