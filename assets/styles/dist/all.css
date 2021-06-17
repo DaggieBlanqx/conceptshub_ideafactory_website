@@ -73,13 +73,10 @@ Start: Common presets
 
 /*Utility classes*/
 .wideCard {
-  display: -ms-grid;
   display: grid;
-      grid-template-rows: 3fr 1fr 3fr 3fr;
-      grid-template-columns: 1fr 3fr;
-      grid-template-areas: "_smallTitle _bigSubtitle" "_smallTitle _separator" "_smallTitle _content" "_smallTitle _button";
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  grid-template-rows: 3fr 1fr 3fr 3fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "_smallTitle _smallTitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
   grid-area: _separator;
 }
 
@@ -96,8 +93,7 @@ Start: Common presets
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 17px;
-  -webkit-text-decoration: #777777;
-          text-decoration: #777777;
+  text-decoration: #777777;
   text-align: left;
   text-indent: 0px;
   text-transform: uppercase;
@@ -122,8 +118,7 @@ Start: Common presets
   font-weight: 400;
   letter-spacing: normal;
   line-height: 25px;
-  -webkit-text-decoration: #333333;
-          text-decoration: #333333;
+  text-decoration: #333333;
   text-align: left;
   text-indent: 0px;
   text-transform: none;
@@ -142,8 +137,7 @@ Start: Common presets
   font-weight: 400;
   letter-spacing: -2px;
   line-height: 71.5px;
-  -webkit-text-decoration: #031e32;
-          text-decoration: #031e32;
+  text-decoration: #031e32;
   text-align: left;
   text-indent: 0px;
   text-transform: none;
@@ -169,8 +163,7 @@ Start: Common presets
   font-weight: 500;
   letter-spacing: normal;
   line-height: 20px;
-  -webkit-text-decoration: white;
-          text-decoration: white;
+  text-decoration: white;
   text-indent: 0px;
   text-transform: uppercase;
   vertical-align: baseline;
@@ -180,27 +173,18 @@ Start: Common presets
 }
 
 .wideCard .wideCard_smallTitle {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 1;
   grid-area: _smallTitle;
 }
 
 .wideCard .wideCard_bigSubtitle {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: _bigSubtitle;
 }
 
 .wideCard .wideCard_content {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
   grid-area: _content;
 }
 
 .wideCard .wideCard_button {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
   grid-area: _button;
 }
 
@@ -211,13 +195,8 @@ Start: Common presets
 Start: home_page
 */
 .template_page footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .template_page footer .firstRow .contactUs {
@@ -226,25 +205,15 @@ Start: home_page
 }
 
 .template_page footer .firstRow .findUs {
-  display: -ms-grid;
   display: grid;
 }
 
 .template_page footer .firstRow .findUs figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: .2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 80px 0;
 }
 
@@ -270,8 +239,7 @@ Start: home_page
   font-weight: 400;
   letter-spacing: -1px;
   line-height: 27.5px;
-  -webkit-text-decoration: white;
-          text-decoration: white;
+  text-decoration: white;
   text-align: center;
   text-indent: 0px;
   text-transform: none;
@@ -290,8 +258,7 @@ Start: home_page
   font-weight: 400;
   letter-spacing: normal;
   line-height: 25px;
-  -webkit-text-decoration: white;
-          text-decoration: white;
+  text-decoration: white;
   text-align: center;
   text-indent: 0px;
   text-transform: none;
@@ -310,8 +277,7 @@ Start: home_page
   font-weight: 400;
   letter-spacing: normal;
   line-height: 25px;
-  -webkit-text-decoration: white;
-          text-decoration: white;
+  text-decoration: white;
   text-align: center;
   text-indent: 0px;
   text-transform: none;
@@ -330,8 +296,7 @@ Start: home_page
   font-weight: 500;
   letter-spacing: normal;
   line-height: 25px;
-  -webkit-text-decoration: var(--lightBlue_chub);
-          text-decoration: var(--lightBlue_chub);
+  text-decoration: var(--lightBlue_chub);
   text-align: center;
   text-indent: 0px;
   text-transform: none;
@@ -350,8 +315,7 @@ Start: home_page
   font-weight: 500;
   letter-spacing: normal;
   line-height: 25px;
-  -webkit-text-decoration: var(--lightBlue_chub);
-          text-decoration: var(--lightBlue_chub);
+  text-decoration: var(--lightBlue_chub);
   text-align: center;
   text-indent: 0px;
   text-transform: none;
@@ -363,16 +327,10 @@ Start: home_page
 
 .template_page footer .secondRow {
   padding: 0 var(--bothVerticalSidesBodyPadding);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 50px;
   background-color: #031e32;
-  background-image: -webkit-gradient(linear, right bottom, left top, from(#123458), to(#071626));
   background-image: linear-gradient(to top left, #123458, #071626);
 }
 
@@ -386,12 +344,9 @@ Start: home_page
 }
 
 .template_page footer .secondRow .upperMenu {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: (auto-fit)[auto];
-      grid-template-rows: repeat(auto, auto-fit);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, auto-fit);
   grid-gap: 50px;
 }
 
@@ -436,7 +391,6 @@ Start: home_page
 
 .template_page footer .secondRow .upperMenu > div > ul > li > a {
   color: inherit;
-  -webkit-transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-decoration: none;
 }
@@ -446,12 +400,9 @@ Start: home_page
 }
 
 .template_page footer .secondRow .lowerMenu {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: (auto-fit)[auto];
-      grid-template-rows: repeat(auto, auto-fit);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, auto-fit);
   grid-gap: 50px;
 }
 
@@ -496,7 +447,6 @@ Start: home_page
 
 .template_page footer .secondRow .lowerMenu > div > ul > li > a {
   color: inherit;
-  -webkit-transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-decoration: none;
 }
@@ -511,13 +461,10 @@ Start: home_page
 }
 
 .template_page footer .secondRow .credits_and_creator {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (35px)[2];
-      grid-template-rows: repeat(2, 35px);
-      grid-template-areas: "credits credits" "creator creator";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 35px);
+  grid-template-areas: "credits credits" "creator creator";
   gap: 1rem;
   padding-bottom: 75px;
   font-family: "Gotham A", "Gotham B";
@@ -536,36 +483,24 @@ Start: home_page
 }
 
 .template_page footer .secondRow .credits_and_creator span {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  justify-self: center;
+  align-self: center;
   text-align: center;
 }
 
 .template_page footer .secondRow .credits_and_creator .credits {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: credits;
 }
 
 .template_page footer .secondRow .credits_and_creator .creator {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: creator;
 }
 
 .template_page footer .thirdRow .legal_and_social {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
-  -ms-grid-rows: (auto-fit)[2];
-      grid-template-rows: repeat(2, auto-fit);
-      grid-template-areas: "legal legal" "social social";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, auto-fit);
+  grid-template-areas: "legal legal" "social social";
   grid-gap: 0;
   background-color: red;
   padding: 0;
@@ -578,21 +513,12 @@ Start: home_page
 
 .template_page footer .thirdRow .legal_and_social > .legal {
   padding: 0 var(--bothVerticalSidesBodyPadding);
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: legal;
   background-color: var(--veryDarkBlue_chub);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  align-items: center;
 }
 
 .template_page footer .thirdRow .legal_and_social > .legal > li {
@@ -619,21 +545,12 @@ Start: home_page
 
 .template_page footer .thirdRow .legal_and_social > .social {
   padding: 0 var(--bothVerticalSidesBodyPadding);
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: social;
   background-color: var(--lightBlue_chub);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .template_page footer .thirdRow .legal_and_social > .social > li {
@@ -662,61 +579,45 @@ Start: home_page
     border: solid 5px green;
   }
   .template_page footer .firstRow .findUs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    flex-direction: row;
+    align-items: stretch;
   }
   .template_page footer .firstRow .findUs figure {
     height: 277.5px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .template_page footer .secondRow .credits_and_creator {
-        grid-template-areas: "credits creator" "credits creator";
+    grid-template-areas: "credits creator" "credits creator";
   }
   .template_page footer .secondRow .credits_and_creator span {
     text-align: unset;
   }
   .template_page footer .secondRow .credits_and_creator .credits {
-    -ms-grid-column-align: start;
-        justify-self: start;
+    justify-self: start;
   }
   .template_page footer .secondRow .credits_and_creator .creator {
-    -ms-grid-column-align: end;
-        justify-self: end;
+    justify-self: end;
   }
   .template_page footer .secondRow .upperMenu {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: (auto-fit)[auto];
-        grid-template-rows: repeat(auto, auto-fit);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto, auto-fit);
   }
   .template_page footer .secondRow .upperMenu > div {
     max-width: 355px;
   }
   .template_page footer .secondRow .lowerMenu {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: (auto-fit)[auto];
-        grid-template-rows: repeat(auto, auto-fit);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto, auto-fit);
   }
   .template_page footer .secondRow .lowerMenu > div {
     max-width: 355px;
   }
   .template_page footer .thirdRow {
-    -ms-grid-rows: (30px)[2];
-        grid-template-rows: repeat(2, 30px);
+    grid-template-rows: repeat(2, 30px);
   }
   .template_page footer .thirdRow .legal_and_social {
-        grid-template-areas: "legal social" "legal social";
+    grid-template-areas: "legal social" "legal social";
   }
 }
 
@@ -725,22 +626,13 @@ Start: home_page
     border: solid 5px violet;
   }
   .template_page footer .firstRow .findUs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    flex-direction: row;
+    align-items: stretch;
   }
   .template_page footer .firstRow .findUs figure {
     height: 277.5px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .template_page footer .secondRow .footerLogo {
     width: 80%;
@@ -749,10 +641,8 @@ Start: home_page
   .template_page footer .secondRow .upperMenu {
     width: 80%;
     margin: 0 auto;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: (auto-fit)[auto];
-        grid-template-rows: repeat(auto, auto-fit);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, auto-fit);
   }
   .template_page footer .secondRow .upperMenu > div {
     max-width: 232.5px;
@@ -760,41 +650,34 @@ Start: home_page
   .template_page footer .secondRow .credits_and_creator {
     width: 80%;
     margin: 0 auto;
-        grid-template-areas: "credits creator" "credits creator";
+    grid-template-areas: "credits creator" "credits creator";
   }
   .template_page footer .secondRow .credits_and_creator span {
     text-align: unset;
   }
   .template_page footer .secondRow .credits_and_creator .credits {
-    -ms-grid-column-align: start;
-        justify-self: start;
+    justify-self: start;
   }
   .template_page footer .secondRow .credits_and_creator .creator {
-    -ms-grid-column-align: end;
-        justify-self: end;
+    justify-self: end;
   }
   .template_page footer .secondRow .lowerMenu {
     width: 80%;
     margin: 0 auto;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: (auto-fit)[auto];
-        grid-template-rows: repeat(auto, auto-fit);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, auto-fit);
   }
   .template_page footer .secondRow .lowerMenu > div {
     max-width: 232.5px;
   }
   .template_page footer .thirdRow {
-    -ms-grid-rows: (30px)[2];
-        grid-template-rows: repeat(2, 30px);
+    grid-template-rows: repeat(2, 30px);
   }
   .template_page footer .thirdRow .legal_and_social {
-        grid-template-areas: "legal social" "legal social";
+    grid-template-areas: "legal social" "legal social";
   }
   .template_page footer .thirdRow .legal_and_social .social {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
     gap: 2.5rem;
   }
 }

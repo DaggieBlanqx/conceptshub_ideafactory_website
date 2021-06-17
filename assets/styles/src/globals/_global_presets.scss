@@ -195,7 +195,8 @@ $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
     display: grid;
     grid-template-rows: 3fr 1fr 3fr 3fr;
     grid-template-columns: 1fr 3fr;
-    grid-template-areas: "_smallTitle _bigSubtitle" "_smallTitle _separator" "_smallTitle _content" "_smallTitle _button";
+    // grid-template-areas: "_smallTitle _bigSubtitle" "_smallTitle _separator" "_smallTitle _content" "_smallTitle _button";
+    grid-template-areas: "_smallTitle _smallTitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
     & &_smallTitle {
         grid-area: _smallTitle;
     }
