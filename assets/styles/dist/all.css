@@ -72,19 +72,7 @@ Start: Common presets
 }
 
 /*Utility classes*/
-.wideCard {
-  display: grid;
-  grid-template-rows: 3fr 1fr 3fr 3fr;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "_smallTitle _smallTitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
-  grid-area: _separator;
-}
-
-.wideCard--test {
-  color: red;
-}
-
-.wideCard_smallTitle {
+.card_smallTitle {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 17px;
@@ -103,13 +91,13 @@ Start: Common presets
   color: #777777;
 }
 
-.wideCard_separator {
+.card_separator {
   height: 3px;
   width: 50px;
   border-bottom: 3px solid var(--lightBlue_chub);
 }
 
-.wideCard_content {
+.card_content {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -128,7 +116,7 @@ Start: Common presets
   color: #333333;
 }
 
-.wideCard_bigSubtitle {
+.card_bigSubtitle {
   /* Font & Text */
   font-family: "Libre Baskerville", serif;
   font-size: 65px;
@@ -148,7 +136,7 @@ Start: Common presets
   /* Box */
 }
 
-.wideCard_button {
+.card_button {
   outline: none;
   border: none;
   text-align: center;
@@ -170,22 +158,18 @@ Start: Common presets
   white-space: normal;
   word-spacing: 0px;
   color: white;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+  transition-property: background-color, color;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
-.wideCard .wideCard_smallTitle {
-  grid-area: _smallTitle;
-}
-
-.wideCard .wideCard_bigSubtitle {
-  grid-area: _bigSubtitle;
-}
-
-.wideCard .wideCard_content {
-  grid-area: _content;
-}
-
-.wideCard .wideCard_button {
-  grid-area: _button;
+.card_button:hover {
+  background-color: var(--veryDarkBlue_chub);
 }
 
 /*
@@ -194,21 +178,52 @@ Start: Common presets
 /*
 Start: home_page
 */
-.template_page footer {
+/*
+End: home_page
+*/
+/*
+Start: footer
+*/
+footer {
   display: flex;
   flex-direction: column;
 }
 
-.template_page footer .firstRow .contactUs {
+footer .firstRow .contactUs {
   margin: 0 var(--bothVerticalSidesBodyPadding);
-  border: solid grey 1px;
+  padding: 80px 15px;
+  display: grid;
+  grid-template-rows: repeat(5, auto-fit);
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1rem;
+  grid-template-areas: "_smallTitle _smallTitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
 }
 
-.template_page footer .firstRow .findUs {
+footer .firstRow .contactUs .card_smallTitle {
+  grid-area: _smallTitle;
+}
+
+footer .firstRow .contactUs .card_separator {
+  grid-area: _separator;
+}
+
+footer .firstRow .contactUs .card_bigSubtitle {
+  grid-area: _bigSubtitle;
+}
+
+footer .firstRow .contactUs .card_content {
+  grid-area: _content;
+}
+
+footer .firstRow .contactUs .card_button {
+  grid-area: _button;
+}
+
+footer .firstRow .findUs {
   display: grid;
 }
 
-.template_page footer .firstRow .findUs figure {
+footer .firstRow .findUs figure {
   display: flex;
   flex-direction: column;
   gap: .2rem;
@@ -217,20 +232,20 @@ Start: home_page
   padding: 80px 0;
 }
 
-.template_page footer .firstRow .findUs figure:nth-child(odd) {
+footer .firstRow .findUs figure:nth-child(odd) {
   background-color: var(--almostDarkBlue_chub);
 }
 
-.template_page footer .firstRow .findUs figure:nth-child(even) {
+footer .firstRow .findUs figure:nth-child(even) {
   background-color: var(--almostLightBlue_chub);
 }
 
-.template_page footer .firstRow .findUs figure img.cityThumbnail {
+footer .firstRow .findUs figure img.cityThumbnail {
   height: 100px;
   width: 105.5px;
 }
 
-.template_page footer .firstRow .findUs figure .city {
+footer .firstRow .findUs figure .city {
   /* Font & Text */
   font-family: "Libre Baskerville", serif;
   font-size: 25px;
@@ -249,7 +264,7 @@ Start: home_page
   color: white;
 }
 
-.template_page footer .firstRow .findUs figure .street {
+footer .firstRow .findUs figure .street {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -268,7 +283,7 @@ Start: home_page
   color: white;
 }
 
-.template_page footer .firstRow .findUs figure .location {
+footer .firstRow .findUs figure .location {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -287,7 +302,7 @@ Start: home_page
   color: white;
 }
 
-.template_page footer .firstRow .findUs figure .phone {
+footer .firstRow .findUs figure .phone {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -306,7 +321,7 @@ Start: home_page
   color: #35bdf6;
 }
 
-.template_page footer .firstRow .findUs figure .email {
+footer .firstRow .findUs figure .email {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 15px;
@@ -325,7 +340,7 @@ Start: home_page
   color: #35bdf6;
 }
 
-.template_page footer .secondRow {
+footer .secondRow {
   padding: 0 var(--bothVerticalSidesBodyPadding);
   display: flex;
   flex-direction: column;
@@ -334,27 +349,27 @@ Start: home_page
   background-image: linear-gradient(to top left, #123458, #071626);
 }
 
-.template_page footer .secondRow .footerLogo {
+footer .secondRow .footerLogo {
   padding-top: 50px;
 }
 
-.template_page footer .secondRow .footerLogo a img {
+footer .secondRow .footerLogo a img {
   width: 130px;
   height: auto;
 }
 
-.template_page footer .secondRow .upperMenu {
+footer .secondRow .upperMenu {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto, auto-fit);
   grid-gap: 50px;
 }
 
-.template_page footer .secondRow .upperMenu > div {
+footer .secondRow .upperMenu > div {
   max-width: 727px;
 }
 
-.template_page footer .secondRow .upperMenu > div > h3 {
+footer .secondRow .upperMenu > div > h3 {
   font-family: "Gotham A", "Gotham B";
   font-size: 13px;
   font-style: normal;
@@ -371,7 +386,7 @@ Start: home_page
   color: var(--white_chub);
 }
 
-.template_page footer .secondRow .upperMenu > div > ul > li {
+footer .secondRow .upperMenu > div > ul > li {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 14px;
@@ -389,28 +404,28 @@ Start: home_page
   color: var(--lightBlue_chub);
 }
 
-.template_page footer .secondRow .upperMenu > div > ul > li > a {
+footer .secondRow .upperMenu > div > ul > li > a {
   color: inherit;
   transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-decoration: none;
 }
 
-.template_page footer .secondRow .upperMenu > div > ul > li > a:hover {
+footer .secondRow .upperMenu > div > ul > li > a:hover {
   color: var(--white_chub);
 }
 
-.template_page footer .secondRow .lowerMenu {
+footer .secondRow .lowerMenu {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto, auto-fit);
   grid-gap: 50px;
 }
 
-.template_page footer .secondRow .lowerMenu > div {
+footer .secondRow .lowerMenu > div {
   max-width: 727px;
 }
 
-.template_page footer .secondRow .lowerMenu > div > h3 {
+footer .secondRow .lowerMenu > div > h3 {
   font-family: "Gotham A", "Gotham B";
   font-size: 13px;
   font-style: normal;
@@ -427,7 +442,7 @@ Start: home_page
   color: var(--white_chub);
 }
 
-.template_page footer .secondRow .lowerMenu > div > ul > li {
+footer .secondRow .lowerMenu > div > ul > li {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 14px;
@@ -445,22 +460,22 @@ Start: home_page
   color: var(--lightBlue_chub);
 }
 
-.template_page footer .secondRow .lowerMenu > div > ul > li > a {
+footer .secondRow .lowerMenu > div > ul > li > a {
   color: inherit;
   transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-decoration: none;
 }
 
-.template_page footer .secondRow .lowerMenu > div > ul > li > a:hover {
+footer .secondRow .lowerMenu > div > ul > li > a:hover {
   color: var(--white_chub);
 }
 
-.template_page footer .secondRow .lowerMenu > div > ul > li > a:active {
+footer .secondRow .lowerMenu > div > ul > li > a:active {
   color: var(--white_chub);
   font-weight: 700;
 }
 
-.template_page footer .secondRow .credits_and_creator {
+footer .secondRow .credits_and_creator {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 35px);
@@ -482,21 +497,21 @@ Start: home_page
   color: var(--white_chub);
 }
 
-.template_page footer .secondRow .credits_and_creator span {
+footer .secondRow .credits_and_creator span {
   justify-self: center;
   align-self: center;
   text-align: center;
 }
 
-.template_page footer .secondRow .credits_and_creator .credits {
+footer .secondRow .credits_and_creator .credits {
   grid-area: credits;
 }
 
-.template_page footer .secondRow .credits_and_creator .creator {
+footer .secondRow .credits_and_creator .creator {
   grid-area: creator;
 }
 
-.template_page footer .thirdRow .legal_and_social {
+footer .thirdRow .legal_and_social {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, auto-fit);
@@ -507,11 +522,11 @@ Start: home_page
   margin: 0;
 }
 
-.template_page footer .thirdRow .legal_and_social > ul {
+footer .thirdRow .legal_and_social > ul {
   height: 60px;
 }
 
-.template_page footer .thirdRow .legal_and_social > .legal {
+footer .thirdRow .legal_and_social > .legal {
   padding: 0 var(--bothVerticalSidesBodyPadding);
   grid-area: legal;
   background-color: var(--veryDarkBlue_chub);
@@ -521,11 +536,11 @@ Start: home_page
   align-items: center;
 }
 
-.template_page footer .thirdRow .legal_and_social > .legal > li {
+footer .thirdRow .legal_and_social > .legal > li {
   list-style: none;
 }
 
-.template_page footer .thirdRow .legal_and_social > .legal > li > a {
+footer .thirdRow .legal_and_social > .legal > li > a {
   text-decoration: none;
   font-family: "Gotham A", "Gotham B";
   color: var(--lightBlue_chub);
@@ -543,7 +558,7 @@ Start: home_page
   word-spacing: 0px;
 }
 
-.template_page footer .thirdRow .legal_and_social > .social {
+footer .thirdRow .legal_and_social > .social {
   padding: 0 var(--bothVerticalSidesBodyPadding);
   grid-area: social;
   background-color: var(--lightBlue_chub);
@@ -553,136 +568,142 @@ Start: home_page
   justify-content: space-between;
 }
 
-.template_page footer .thirdRow .legal_and_social > .social > li {
+footer .thirdRow .legal_and_social > .social > li {
   list-style: none;
 }
 
-.template_page footer .thirdRow .legal_and_social > .social > li > a {
+footer .thirdRow .legal_and_social > .social > li > a {
   text-decoration: none;
   height: 20px;
   width: 20px;
 }
 
-.template_page footer .thirdRow .legal_and_social > .social > li > a > i::before {
+footer .thirdRow .legal_and_social > .social > li > a > i::before {
   color: var(--veryDarkBlue_chub);
   font-size: 20px;
 }
 
 @media (max-width: 768px) {
-  .template_page footer {
+  footer {
     border: solid 5px purple;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  .template_page footer {
+  footer {
     border: solid 5px green;
   }
-  .template_page footer .firstRow .findUs {
+  footer .firstRow .findUs {
     display: flex;
     flex-direction: row;
     align-items: stretch;
   }
-  .template_page footer .firstRow .findUs figure {
+  footer .firstRow .findUs figure {
     height: 277.5px;
     flex: 1;
   }
-  .template_page footer .secondRow .credits_and_creator {
+  footer .secondRow .credits_and_creator {
     grid-template-areas: "credits creator" "credits creator";
   }
-  .template_page footer .secondRow .credits_and_creator span {
+  footer .secondRow .credits_and_creator span {
     text-align: unset;
   }
-  .template_page footer .secondRow .credits_and_creator .credits {
+  footer .secondRow .credits_and_creator .credits {
     justify-self: start;
   }
-  .template_page footer .secondRow .credits_and_creator .creator {
+  footer .secondRow .credits_and_creator .creator {
     justify-self: end;
   }
-  .template_page footer .secondRow .upperMenu {
+  footer .secondRow .upperMenu {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto, auto-fit);
   }
-  .template_page footer .secondRow .upperMenu > div {
+  footer .secondRow .upperMenu > div {
     max-width: 355px;
   }
-  .template_page footer .secondRow .lowerMenu {
+  footer .secondRow .lowerMenu {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto, auto-fit);
   }
-  .template_page footer .secondRow .lowerMenu > div {
+  footer .secondRow .lowerMenu > div {
     max-width: 355px;
   }
-  .template_page footer .thirdRow {
+  footer .thirdRow {
     grid-template-rows: repeat(2, 30px);
   }
-  .template_page footer .thirdRow .legal_and_social {
+  footer .thirdRow .legal_and_social {
     grid-template-areas: "legal social" "legal social";
   }
 }
 
 @media (min-width: 993px) {
-  .template_page footer {
+  footer {
     border: solid 5px violet;
   }
-  .template_page footer .firstRow .findUs {
+  footer .firstRow .contactUs {
+    grid-template-rows: repeat(4, auto);
+    margin: 0 auto;
+    max-width: 1170px;
+    grid-template-areas: "_smallTitle  _bigSubtitle" "_smallTitle  _separator" "_smallTitle _content" "_smallTitle _button";
+  }
+  footer .firstRow .findUs {
     display: flex;
     flex-direction: row;
     align-items: stretch;
   }
-  .template_page footer .firstRow .findUs figure {
+  footer .firstRow .findUs figure {
     height: 277.5px;
     flex: 1;
   }
-  .template_page footer .secondRow .footerLogo {
+  footer .secondRow .footerLogo {
     width: 80%;
     margin: 0 auto;
   }
-  .template_page footer .secondRow .upperMenu {
+  footer .secondRow .upperMenu {
     width: 80%;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(auto, auto-fit);
   }
-  .template_page footer .secondRow .upperMenu > div {
+  footer .secondRow .upperMenu > div {
     max-width: 232.5px;
   }
-  .template_page footer .secondRow .credits_and_creator {
+  footer .secondRow .credits_and_creator {
     width: 80%;
     margin: 0 auto;
     grid-template-areas: "credits creator" "credits creator";
   }
-  .template_page footer .secondRow .credits_and_creator span {
+  footer .secondRow .credits_and_creator span {
     text-align: unset;
   }
-  .template_page footer .secondRow .credits_and_creator .credits {
+  footer .secondRow .credits_and_creator .credits {
     justify-self: start;
   }
-  .template_page footer .secondRow .credits_and_creator .creator {
+  footer .secondRow .credits_and_creator .creator {
     justify-self: end;
   }
-  .template_page footer .secondRow .lowerMenu {
+  footer .secondRow .lowerMenu {
     width: 80%;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(auto, auto-fit);
   }
-  .template_page footer .secondRow .lowerMenu > div {
+  footer .secondRow .lowerMenu > div {
     max-width: 232.5px;
   }
-  .template_page footer .thirdRow {
+  footer .thirdRow {
     grid-template-rows: repeat(2, 30px);
   }
-  .template_page footer .thirdRow .legal_and_social {
+  footer .thirdRow .legal_and_social {
     grid-template-areas: "legal social" "legal social";
   }
-  .template_page footer .thirdRow .legal_and_social .social {
+  footer .thirdRow .legal_and_social .social {
     justify-content: flex-start;
     gap: 2.5rem;
   }
 }
 
 /*
-End: home_page
+End: footer
 */
 /*# sourceMappingURL=all.css.map */

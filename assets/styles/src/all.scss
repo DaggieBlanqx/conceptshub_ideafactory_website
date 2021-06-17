@@ -26,3 +26,19 @@ Start: home_page
 /*
 End: home_page
 */
+
+
+/*
+Start: footer
+*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    @import './globals/footer';
+}
+
+
+/*
+End: footer
+*/
