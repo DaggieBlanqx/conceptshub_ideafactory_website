@@ -1,14 +1,14 @@
-strong {
+div .bot-line {
     /* Font & Text */
     font-family: "Gotham A", "Gotham B";
-    font-size: 15px;
+    font-size: 14px;
     font-style: normal;
     font-variant: normal;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: normal;
-    line-height: 25px;
-    text-decoration: rgb(53, 189, 246);
-    text-align: center;
+    line-height: 20px;
+    text-decoration: rgb(51, 51, 51);
+    text-align: left;
     text-indent: 0px;
     text-transform: none;
     vertical-align: baseline;
@@ -20,10 +20,8 @@ strong {
     background-image: none;
     background-position: 0% 0%;
     background-repeat: repeat;
-    color: rgb(53, 189, 246);
+    color: rgb(51, 51, 51);
     /* Box */
-    height: auto;
-    width: auto;
     border: ;
     border-top: ;
     border-right: ;
@@ -33,7 +31,7 @@ strong {
     padding: ;
     max-height: none;
     min-height: 0px;
-    max-width: none;
+    max-width: 50px;
     min-width: 0px;
     /* Positioning */
     position: static;
@@ -42,12 +40,12 @@ strong {
     right: auto;
     left: auto;
     float: none;
-    display: inline;
+    display: block;
     clear: none;
     z-index: auto;
     /* List */
     list-style-image: none;
-    list-style-type: none;
+    list-style-type: disc;
     list-style-position: outside;
     /* Table */
     border-collapse: separate;
@@ -57,7 +55,7 @@ strong {
     table-layout: auto;
     /* Miscellaneous */
     overflow: visible;
-    cursor: pointer;
+    cursor: auto;
     visibility: visible;
     /* Effects */
     transform: none;

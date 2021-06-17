@@ -72,6 +72,138 @@ Start: Common presets
 }
 
 /*Utility classes*/
+.wideCard {
+  display: -ms-grid;
+  display: grid;
+      grid-template-rows: 3fr 1fr 3fr 3fr;
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas: "_smallTitle _bigSubtitle" "_smallTitle _separator" "_smallTitle _content" "_smallTitle _button";
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: _separator;
+}
+
+.wideCard--test {
+  color: red;
+}
+
+.wideCard_smallTitle {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 17px;
+  -webkit-text-decoration: #777777;
+          text-decoration: #777777;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #777777;
+}
+
+.wideCard_separator {
+  height: 3px;
+  width: 50px;
+  border-bottom: 3px solid var(--lightBlue_chub);
+}
+
+.wideCard_content {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25px;
+  -webkit-text-decoration: #333333;
+          text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+}
+
+.wideCard_bigSubtitle {
+  /* Font & Text */
+  font-family: "Libre Baskerville", serif;
+  font-size: 65px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 71.5px;
+  -webkit-text-decoration: #031e32;
+          text-decoration: #031e32;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #031e32;
+  /* Box */
+}
+
+.wideCard_button {
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: var(--lightBlue_chub);
+  height: 50px;
+  width: 154.417px;
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 20px;
+  -webkit-text-decoration: white;
+          text-decoration: white;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+}
+
+.wideCard .wideCard_smallTitle {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  grid-area: _smallTitle;
+}
+
+.wideCard .wideCard_bigSubtitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: _bigSubtitle;
+}
+
+.wideCard .wideCard_content {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: _content;
+}
+
+.wideCard .wideCard_button {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: _button;
+}
+
 /*
 Start: Common presets
 */
@@ -86,6 +218,11 @@ Start: home_page
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.template_page footer .firstRow .contactUs {
+  margin: 0 var(--bothVerticalSidesBodyPadding);
+  border: solid grey 1px;
 }
 
 .template_page footer .firstRow .findUs {

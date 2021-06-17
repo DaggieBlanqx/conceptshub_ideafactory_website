@@ -21,3 +21,193 @@ $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
 
 
 /*Utility classes*/
+
+// .wideCard_smallTitle {
+//     /* Font & Text */
+//     font-family: "Gotham A", "Gotham B";
+//     font-size: 17px;
+//     font-style: normal;
+//     font-variant: normal;
+//     font-weight: 500;
+//     letter-spacing: 1px;
+//     line-height: 17px;
+//     text-decoration: rgb(119, 119, 119);
+//     text-align: left;
+//     text-indent: 0px;
+//     text-transform: uppercase;
+//     vertical-align: baseline;
+//     white-space: normal;
+//     word-spacing: 0px;
+//     color: rgb(119, 119, 119);
+// }
+// .wideCard_separator {
+//     height: 3px;
+//     width: 50px;
+//     border-bottom: 3px solid var(--lightBlue_chub);
+// }
+// .wideCard_content {
+//     /* Font & Text */
+//     font-family: "Gotham A", "Gotham B";
+//     font-size: 15px;
+//     font-style: normal;
+//     font-variant: normal;
+//     font-weight: 400;
+//     letter-spacing: normal;
+//     line-height: 25px;
+//     text-decoration: rgb(51, 51, 51);
+//     text-align: left;
+//     text-indent: 0px;
+//     text-transform: none;
+//     vertical-align: baseline;
+//     white-space: normal;
+//     word-spacing: 0px;
+//     color: rgb(51, 51, 51);
+// }
+// .wideCard_bigSubtitle {
+//     /* Font & Text */
+//     font-family: "Libre Baskerville", serif;
+//     font-size: 65px;
+//     font-style: normal;
+//     font-variant: normal;
+//     font-weight: 400;
+//     letter-spacing: -2px;
+//     line-height: 71.5px;
+//     text-decoration: rgb(3, 30, 50);
+//     text-align: left;
+//     text-indent: 0px;
+//     text-transform: none;
+//     vertical-align: baseline;
+//     white-space: normal;
+//     word-spacing: 0px;
+//     color: rgb(3, 30, 50);
+//     /* Box */
+// }
+// .wideCard_button {
+//     outline: none;
+//     border: none;
+//     text-align: center;
+//     background-color: var(--lightBlue_chub);
+//     height: 50px;
+//     width: 154.417px;
+//     /* Font & Text */
+//     font-family: "Gotham A", "Gotham B";
+//     font-size: 14px;
+//     font-style: normal;
+//     font-variant: normal;
+//     font-weight: 500;
+//     letter-spacing: normal;
+//     line-height: 20px;
+//     text-decoration: rgb(255, 255, 255);
+//     text-indent: 0px;
+//     text-transform: uppercase;
+//     vertical-align: baseline;
+//     white-space: normal;
+//     word-spacing: 0px;
+//     color: rgb(255, 255, 255);
+// }
+.wideCard {
+    &--test {
+        color: red;
+    }
+    &_smallTitle {
+        /* Font & Text */
+        font-family: "Gotham A", "Gotham B";
+        font-size: 17px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 17px;
+        text-decoration: rgb(119, 119, 119);
+        text-align: left;
+        text-indent: 0px;
+        text-transform: uppercase;
+        vertical-align: baseline;
+        white-space: normal;
+        word-spacing: 0px;
+        color: rgb(119, 119, 119);
+    }
+    &_separator {
+        height: 3px;
+        width: 50px;
+        border-bottom: 3px solid var(--lightBlue_chub);
+    }
+    &_content {
+        /* Font & Text */
+        font-family: "Gotham A", "Gotham B";
+        font-size: 15px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 25px;
+        text-decoration: rgb(51, 51, 51);
+        text-align: left;
+        text-indent: 0px;
+        text-transform: none;
+        vertical-align: baseline;
+        white-space: normal;
+        word-spacing: 0px;
+        color: rgb(51, 51, 51);
+    }
+    &_bigSubtitle {
+        /* Font & Text */
+        font-family: "Libre Baskerville", serif;
+        font-size: 65px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        letter-spacing: -2px;
+        line-height: 71.5px;
+        text-decoration: rgb(3, 30, 50);
+        text-align: left;
+        text-indent: 0px;
+        text-transform: none;
+        vertical-align: baseline;
+        white-space: normal;
+        word-spacing: 0px;
+        color: rgb(3, 30, 50);
+        /* Box */
+    }
+    &_button {
+        outline: none;
+        border: none;
+        text-align: center;
+        background-color: var(--lightBlue_chub);
+        height: 50px;
+        width: 154.417px;
+        /* Font & Text */
+        font-family: "Gotham A", "Gotham B";
+        font-size: 14px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        letter-spacing: normal;
+        line-height: 20px;
+        text-decoration: rgb(255, 255, 255);
+        text-indent: 0px;
+        text-transform: uppercase;
+        vertical-align: baseline;
+        white-space: normal;
+        word-spacing: 0px;
+        color: rgb(255, 255, 255);
+    }
+    display: grid;
+    grid-template-rows: 3fr 1fr 3fr 3fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "_smallTitle _bigSubtitle" "_smallTitle _separator" "_smallTitle _content" "_smallTitle _button";
+    & &_smallTitle {
+        grid-area: _smallTitle;
+    }
+    & &_separator {}
+    grid-area: _separator;
+    & &_bigSubtitle {
+        grid-area: _bigSubtitle;
+    }
+    & &_content {
+        grid-area: _content;
+    }
+    & &_button {
+        grid-area: _button;
+    }
+}

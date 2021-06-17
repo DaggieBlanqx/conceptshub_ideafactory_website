@@ -6,7 +6,12 @@ footer {
     display: flex;
     flex-direction: column;
     .firstRow {
-        .contactUs {}
+        // background-color: red;
+        .contactUs {
+            margin: 0 var(--bothVerticalSidesBodyPadding);
+            // background-color: rebeccapurple;
+            border: solid grey 1px;
+        }
         .findUs {
             display: grid;
             // grid-template-rows: repeat(2, 1fr);
