@@ -33,37 +33,38 @@ main {
 
 @include media("<=phone") {
     //every device smaller than phone
-    // main {
-    @include responsiveBorder(phone, main);
-    // }
+    main {
+        @include responsiveBorder(phone, main);
+    }
 }
 
 @include media(">phone", "<=tablet") {
     //every device between phone and tablet
-    // main {
-    @include responsiveBorder(tablet, main);
-    // }
+    main {
+        @include responsiveBorder(tablet, main);
+    }
 }
 
 @include media(">tablet") {
     //every device bigger than tabletssss
-    // main {
-    @include responsiveBorder(desktop, main);
-    section {
-        .digitalCreativeAgency {
-            grid-template-rows: repeat(4, auto);
-            margin: 0 auto;
-            max-width: 1170px;
-            grid-template-areas: "_smallTitle  _bigSubtitle""_smallTitle  _separator""_smallTitle _content""_smallTitle _button";
-            .card_smallTitle {
-                max-width: 80%;
-            }
-            .card_bigSubtitle {
-                max-width: 80%;
+    main {
+        @include responsiveBorder(desktop, main);
+        section {
+            .digitalCreativeAgency {
+                grid-template-rows: repeat(4, auto);
+                margin: 0 auto;
+                max-width: 1170px;
+                grid-template-areas: "_smallTitle  _bigSubtitle""_smallTitle  _separator""_smallTitle _content""_smallTitle _button";
+                .card_smallTitle {
+                    max-width: 80%;
+                }
+                .card_bigSubtitle {
+                    max-width: 80%;
+                }
             }
         }
     }
 }
 
-
-}
+// }
+// }

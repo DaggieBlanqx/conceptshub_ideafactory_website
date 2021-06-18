@@ -453,36 +453,6 @@ Start: home_page
   background-color: transparent;
 }
 
-@media (max-width: 768px) {
-  .template_page main {
-    border: solid 5px purple;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-  .template_page main {
-    border: solid 5px green;
-  }
-}
-
-@media (min-width: 993px) {
-  .template_page main {
-    border: solid 5px violet;
-  }
-  .template_page main section .digitalCreativeAgency {
-    grid-template-rows: repeat(4, auto);
-    margin: 0 auto;
-    max-width: 1170px;
-    grid-template-areas: "_smallTitle  _bigSubtitle" "_smallTitle  _separator" "_smallTitle _content" "_smallTitle _button";
-  }
-  .template_page main section .digitalCreativeAgency .card_smallTitle {
-    max-width: 80%;
-  }
-  .template_page main section .digitalCreativeAgency .card_bigSubtitle {
-    max-width: 80%;
-  }
-}
-
 /*
 End: home_page
 */

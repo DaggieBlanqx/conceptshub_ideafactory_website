@@ -1,23 +1,23 @@
-@mixin responsiveBorder($device, $part) {
+@mixin responsiveBorder($device) {
     @if $device==phone {
-        $part {
-            // border: solid 5px purple;
-        }
+        // $part {
+        border: solid 5px purple;
+        // }
     }
     @else if $device==tablet {
-        $part {
-            // border: solid 5px green;
-        }
+        // $part {
+        border: solid 5px green;
+        // }
     }
     @else if $device==desktop {
-        $part {
-            // border: solid 5px violet;
-        }
+        // $part {
+        border: solid 5px violet;
+        // }
     }
     @else {
-        $part {
-            border: none;
-        }
+        // $part {
+        border: none;
+        // }
     }
 }
 
