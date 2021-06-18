@@ -286,9 +286,9 @@ Start: home_page
 
 .template_page header .heroMenus ul.ribbonMenu {
   display: grid;
-  grid-template-columns: repeat(auto-fill, clamp(112px, 128px, 191.75px));
+  grid-template-columns: repeat(auto-fill, 112px);
   grid-auto-flow: column;
-  grid-auto-columns: clamp(112px, 128px, 191.75px);
+  grid-auto-columns: 112px;
   overflow-x: auto;
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -366,13 +366,13 @@ Start: home_page
     margin-top: 35%;
     width: 60%;
   }
-  .template_page header .hero .heroMenus {
+  .template_page header .heroMenus {
     background-color: red;
   }
-  .template_page header .hero .heroMenus ul.ribbonMenu {
+  .template_page header .heroMenus ul.ribbonMenu {
     display: grid;
-    grid-template-columns: repeat(auto-fill, clamp(191.75px, 252px 255.55px));
-    grid-auto-columns: clamp(191.75px, 252px 255.55px);
+    grid-template-columns: repeat(auto-fill, 252px);
+    grid-auto-columns: 252px;
     background-color: red;
   }
 }
@@ -399,6 +399,15 @@ Start: home_page
     margin-top: 15%;
     min-width: 30%;
     max-width: 40%;
+  }
+  .template_page header .heroMenus {
+    background-color: red;
+  }
+  .template_page header .heroMenus ul.ribbonMenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 512px);
+    grid-auto-columns: 512px;
+    background-color: red;
   }
 }
 
