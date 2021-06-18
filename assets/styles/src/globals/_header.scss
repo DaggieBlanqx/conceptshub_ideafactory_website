@@ -96,12 +96,8 @@
 .heroMenus {
     ul.ribbonMenu {
         display: grid;
-        // grid-template-columns: repeat(auto-fill, 512px);
         grid-template-columns: repeat(auto-fill, 112px);
-        // grid-template-columns: repeat(auto-fill, clamp(112px, 128px, 191.75px));
         grid-auto-flow: column;
-        // grid-auto-columns: 512px;
-        // grid-auto-columns: clamp(112px, 128px, 191.75px);
         grid-auto-columns: 112px;
         overflow-x: auto;
         -ms-overflow-style: none;
@@ -225,10 +221,8 @@
         background-color: red;
         ul.ribbonMenu {
             display: grid;
-            // grid-template-columns: repeat(auto-fill, clamp( 191.75px, 252px, 255.55px));
-            // grid-auto-columns: clamp( 191.75px, 252px, 255.55px);
-            grid-template-columns: repeat(auto-fill, 512px);
-            grid-auto-columns: 512px;
+            grid-template-columns: repeat(auto-fill, 303px);
+            grid-auto-columns: 303px;
             background-color: red;
         }
     }

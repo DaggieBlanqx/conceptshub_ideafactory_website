@@ -410,8 +410,8 @@ header .heroMenus ul.ribbonMenu li a {
   }
   header .heroMenus ul.ribbonMenu {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 512px);
-    grid-auto-columns: 512px;
+    grid-template-columns: repeat(auto-fill, 303px);
+    grid-auto-columns: 303px;
     background-color: red;
   }
 }
