@@ -289,14 +289,12 @@
 
 @include media("<=phone") {
     //every device smaller than phone
-    // border: solid 5px purple;
-    @include responsiveBorder(phone);
+    // border: solid 5px purple; 
 }
 
 @include media(">phone", "<=tablet") {
     //every device between phone and tablet
-    // border: solid 5px green;
-    @include responsiveBorder(tablet);
+    // border: solid 5px green; 
     .firstRow {
         .findUs {
             display: flex;
@@ -346,8 +344,7 @@
 
 @include media(">tablet") {
     //every device bigger than tablet
-    // border: solid 5px violet;
-    @include responsiveBorder(desktop);
+    // border: solid 5px violet; 
     .firstRow {
         .contactUs {
             grid-template-rows: repeat(4, auto);

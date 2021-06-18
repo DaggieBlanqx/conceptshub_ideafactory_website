@@ -150,12 +150,12 @@
 
 @include media("<=phone") {
     //every device smaller than phone
-    border: solid 5px purple;
+    //border: solid 5px purple;
 }
 
 @include media(">phone", "<=tablet") {
     //every device between phone and tablet
-    border: solid 5px green;
+    //border: solid 5px green;
     .hero {
         .hero_item {
             &>figcaption {
@@ -193,7 +193,7 @@
 
 @include media(">tablet") {
     //every device bigger than tablet
-    border: solid 5px violet;
+    //border: solid 5px violet;
     .hero {
         .hero_item {
             &>figcaption {

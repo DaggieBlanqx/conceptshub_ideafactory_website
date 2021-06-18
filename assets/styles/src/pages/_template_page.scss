@@ -1,70 +1,179 @@
-main {
-    section {
-        .digitalCreativeAgency {
-            margin: 0 var(--bothVerticalSidesBodyPadding);
-            padding: 80px 15px;
-            display: grid;
-            // grid-template-rows: 3fr 1fr 3fr 3fr;
-            grid-template-rows: repeat(5, auto-fit);
-            grid-template-columns: 1fr 3fr;
-            grid-gap: 1rem;
-            grid-template-areas: "_smallTitle _smallTitle"" _bigSubtitle  _bigSubtitle""_separator _separator""_content _content""_button _button";
-            .card_smallTitle {
-                grid-area: _smallTitle;
-                // max-width: 80%;
-            }
-            .card_separator {
-                grid-area: _separator;
-            }
-            .card_bigSubtitle {
-                grid-area: _bigSubtitle;
-                // max-width: 80%;
-            }
-            .card_content {
-                grid-area: _content;
-            }
-            .card_button {
-                grid-area: _button;
-                background-color: transparent;
-            }
-        }
-    }
-}
-
-@include media("<=phone") {
-    //every device smaller than phone
-    main {
-        @include responsiveBorder(phone, main);
-    }
-}
-
-@include media(">phone", "<=tablet") {
-    //every device between phone and tablet
-    main {
-        @include responsiveBorder(tablet, main);
-    }
-}
-
-@include media(">tablet") {
-    //every device bigger than tabletssss
-    main {
-        @include responsiveBorder(desktop, main);
-        section {
-            .digitalCreativeAgency {
-                grid-template-rows: repeat(4, auto);
-                margin: 0 auto;
-                max-width: 1170px;
-                grid-template-areas: "_smallTitle  _bigSubtitle""_smallTitle  _separator""_smallTitle _content""_smallTitle _button";
-                .card_smallTitle {
-                    max-width: 80%;
+            main {
+                section {
+                    .digitalCreativeAgency {
+                        margin: 0 var(--bothVerticalSidesBodyPadding);
+                        padding: 80px 15px;
+                        display: grid;
+                        // grid-template-rows: 3fr 1fr 3fr 3fr;
+                        grid-template-rows: repeat(5, auto-fit);
+                        grid-template-columns: 1fr 3fr;
+                        grid-gap: 1rem;
+                        grid-template-areas: "_smallTitle _smallTitle"" _bigSubtitle  _bigSubtitle""_separator _separator""_content _content""_button _button";
+                        .card_smallTitle {
+                            grid-area: _smallTitle;
+                            // max-width: 80%;
+                        }
+                        .card_separator {
+                            grid-area: _separator;
+                        }
+                        .card_bigSubtitle {
+                            grid-area: _bigSubtitle;
+                            // max-width: 80%;
+                        }
+                        .card_content {
+                            grid-area: _content;
+                        }
+                        .card_button {
+                            grid-area: _button;
+                            background-color: transparent;
+                        }
+                    }
                 }
-                .card_bigSubtitle {
-                    max-width: 80%;
+                section {
+                    width: 100%;
+                    margin: 0 auto;
+                    @include containWithin80Percent;
+                    .featuredWorks {
+                        // margin: 0 var(--bothVerticalSidesBodyPadding);
+                        // padding: 80px 15px;
+                        display: grid;
+                        grid-template-rows: repeat(auto-fit, 1fr);
+                        grid-template-columns: 1fr;
+                        // grid-gap: 1rem;
+                        // width: 60%;
+                        .featuredWork {
+                            background-color: red;
+                            position: relative;
+                            min-height: 388.3px;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                opacity: 1;
+                                // mix-blend-mode: hard-light;
+                                width: 100%;
+                                height: 35%;
+                                display: block;
+                                position: absolute;
+                                bottom: 0;
+                                background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
+                            }
+                            &:hover {
+                                opacity: .9;
+                                -webkit-transition: all .15s ease-out;
+                                -moz-transition: all .15s ease-out;
+                                transition: all .15s ease-out;
+                            }
+                            .featuredWork_image {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+                            .featuredWork_caption {
+                                position: absolute;
+                                bottom: 5%;
+                                left: 5%;
+                                z-index: 2;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                                padding-bottom: 40px;
+                                &>.featuredWork_title {
+                                    font-family: "Libre Baskerville", serif;
+                                    font-size: 35px;
+                                    font-style: normal;
+                                    font-variant: normal;
+                                    font-weight: 400;
+                                    letter-spacing: -1px;
+                                    line-height: 38.5px;
+                                    text-decoration: rgb(255, 255, 255);
+                                    text-align: left;
+                                    text-indent: 0px;
+                                    text-transform: none;
+                                    vertical-align: baseline;
+                                    white-space: normal;
+                                    word-spacing: 0px;
+                                    color: rgb(255, 255, 255);
+                                }
+                                &>.featuredWork_subtitle {
+                                    font-family: "Gotham A", "Gotham B";
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-variant: normal;
+                                    font-weight: 500;
+                                    letter-spacing: normal;
+                                    line-height: 17.6px;
+                                    text-decoration: rgb(246, 246, 246);
+                                    text-align: left;
+                                    text-indent: 0px;
+                                    text-transform: uppercase;
+                                    vertical-align: baseline;
+                                    white-space: normal;
+                                    word-spacing: 0px;
+                                    color: rgb(246, 246, 246);
+                                }
+                            }
+                        }
+                    }
                 }
             }
-        }
-    }
-}
-
-// }
-// }
+            
+            @include media("<=phone") {
+                //every device smaller than phone
+                main {
+                    //border: solid 5px purple;
+                }
+            }
+            
+            @include media(">phone", "<=tablet") {
+                //every device between phone and tablet
+                main {
+                    //border: solid 5px green;
+                    section {
+                        .featuredWorks {
+                            grid-template-rows: repeat(auto-fit, 1fr);
+                            grid-template-columns: 1fr 1fr;
+                            &>.featuredWork {
+                                min-height: 251.1px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @include media(">tablet") {
+                //every device bigger than tabletssss
+                main {
+                    //border: solid 5px violet;
+                    section {
+                        .digitalCreativeAgency {
+                            grid-template-rows: repeat(4, auto);
+                            margin: 0 auto;
+                            max-width: 1170px;
+                            grid-template-areas: "_smallTitle  _bigSubtitle""_smallTitle  _separator""_smallTitle _content""_smallTitle _button";
+                            .card_smallTitle {
+                                max-width: 80%;
+                            }
+                            .card_bigSubtitle {
+                                max-width: 80%;
+                            }
+                        }
+                    }
+                    section {
+                        .featuredWorks {
+                            grid-template-rows: repeat(auto-fit, 1fr);
+                            grid-template-columns: 1fr 1fr;
+                            &>.featuredWork {
+                                min-height: 330px;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // }
+            // }
