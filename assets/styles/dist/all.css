@@ -178,6 +178,116 @@ Start: Common presets
 /*
 Start: home_page
 */
+.template_page header .hero {
+  height: 90vh;
+  width: 100%;
+}
+
+.template_page header .hero .hero_item {
+  position: relative;
+  height: 100%;
+  width: 100;
+}
+
+.template_page header .hero .hero_item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #041f34;
+  opacity: 1;
+  mix-blend-mode: hard-light;
+}
+
+.template_page header .hero .hero_item > .hero_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.template_page header .hero .hero_item > figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  z-index: 2;
+}
+
+.template_page header .hero .hero_item > figcaption > .logoHolder {
+  justify-self: start;
+  align-self: center;
+}
+
+.template_page header .hero .hero_item > figcaption > .logoHolder img {
+  width: 150px;
+  height: auto;
+}
+
+.template_page header .hero .hero_item > figcaption > .heroContent {
+  justify-self: start;
+  align-self: center;
+  margin: 0 var(--bothVerticalSidesBodyPadding);
+  padding: 80px 15px;
+  display: grid;
+  grid-template-rows: repeat(5, auto-fit);
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1rem;
+  grid-template-areas: "_smallTitle _smallTitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
+}
+
+.template_page header .hero .hero_item > figcaption > .heroContent .card_smallTitle {
+  grid-area: _smallTitle;
+}
+
+.template_page header .hero .hero_item > figcaption > .heroContent .card_separator {
+  grid-area: _separator;
+}
+
+.template_page header .hero .hero_item > figcaption > .heroContent .card_bigSubtitle {
+  grid-area: _bigSubtitle;
+  color: var(--white_chub);
+}
+
+.template_page header .hero .hero_item > figcaption > .heroContent .card_content {
+  grid-area: _content;
+  color: var(--white_chub);
+}
+
+.template_page header .hero .hero_item > figcaption > .heroContent .card_button {
+  grid-area: _button;
+  background-color: transparent;
+  height: 70px;
+  width: 70px;
+}
+
+@media (max-width: 768px) {
+  .template_page footer {
+    border: solid 5px purple;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .template_page footer {
+    border: solid 5px green;
+  }
+}
+
+@media (min-width: 993px) {
+  .template_page footer {
+    border: solid 5px violet;
+  }
+}
+
 /*
 End: home_page
 */
@@ -217,6 +327,7 @@ footer .firstRow .contactUs .card_content {
 
 footer .firstRow .contactUs .card_button {
   grid-area: _button;
+  background-color: transparent;
 }
 
 footer .firstRow .findUs {

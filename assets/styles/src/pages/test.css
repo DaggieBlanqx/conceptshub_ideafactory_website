@@ -1,4 +1,4 @@
-div .bot-line {
+div .blue-overlay {
     /* Font & Text */
     font-family: "Gotham A", "Gotham B";
     font-size: 14px;
@@ -8,7 +8,7 @@ div .bot-line {
     letter-spacing: normal;
     line-height: 20px;
     text-decoration: rgb(51, 51, 51);
-    text-align: left;
+    text-align: start;
     text-indent: 0px;
     text-transform: none;
     vertical-align: baseline;
@@ -22,6 +22,8 @@ div .bot-line {
     background-repeat: repeat;
     color: rgb(51, 51, 51);
     /* Box */
+    height: 0px;
+    width: 767px;
     border: ;
     border-top: ;
     border-right: ;
@@ -31,7 +33,7 @@ div .bot-line {
     padding: ;
     max-height: none;
     min-height: 0px;
-    max-width: 50px;
+    max-width: none;
     min-width: 0px;
     /* Positioning */
     position: static;
