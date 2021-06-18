@@ -176,20 +176,25 @@ Start: Common presets
 Start: Common presets
 */
 /*
-Start: home_page
+Start: header
 */
-.template_page header .hero {
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header .hero {
   height: 100vh;
   width: 100%;
 }
 
-.template_page header .hero .hero_item {
+header .hero .hero_item {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-.template_page header .hero .hero_item::after {
+header .hero .hero_item::after {
   content: "";
   position: absolute;
   top: 0;
@@ -202,7 +207,7 @@ Start: home_page
   mix-blend-mode: hard-light;
 }
 
-.template_page header .hero .hero_item > .hero_bg {
+header .hero .hero_item > .hero_bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -211,7 +216,7 @@ Start: home_page
   width: 100%;
 }
 
-.template_page header .hero .hero_item > figcaption {
+header .hero .hero_item > figcaption {
   position: absolute;
   top: 0;
   left: 0;
@@ -224,7 +229,7 @@ Start: home_page
   z-index: 2;
 }
 
-.template_page header .hero .hero_item > figcaption > .logoHolder {
+header .hero .hero_item > figcaption > .logoHolder {
   grid-area: logoHolder;
   display: grid;
   justify-content: start;
@@ -232,12 +237,12 @@ Start: home_page
   margin: 0 var(--bothVerticalSidesBodyPadding);
 }
 
-.template_page header .hero .hero_item > figcaption > .logoHolder img {
+header .hero .hero_item > figcaption > .logoHolder img {
   width: 150px;
   height: auto;
 }
 
-.template_page header .hero .hero_item > figcaption > .heroContent {
+header .hero .hero_item > figcaption > .heroContent {
   padding: 0 var(--bothVerticalSidesBodyPadding);
   width: 80%;
   grid-area: heroContent;
@@ -250,28 +255,28 @@ Start: home_page
   grid-template-areas: " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
 }
 
-.template_page header .hero .hero_item > figcaption > .heroContent .card_bigSubtitle {
+header .hero .hero_item > figcaption > .heroContent .card_bigSubtitle {
   grid-area: _bigSubtitle;
   color: var(--white_chub);
 }
 
-.template_page header .hero .hero_item > figcaption > .heroContent .card_separator {
+header .hero .hero_item > figcaption > .heroContent .card_separator {
   grid-area: _separator;
 }
 
-.template_page header .hero .hero_item > figcaption > .heroContent .card_content {
+header .hero .hero_item > figcaption > .heroContent .card_content {
   grid-area: _content;
   color: var(--white_chub);
 }
 
-.template_page header .hero .hero_item > figcaption > .heroContent .card_button {
+header .hero .hero_item > figcaption > .heroContent .card_button {
   grid-area: _button;
   background-color: transparent;
   height: 70px;
   width: 70px;
 }
 
-.template_page header .hero .hero_item > figcaption > .scrollHeroDownHolder {
+header .hero .hero_item > figcaption > .scrollHeroDownHolder {
   grid-area: scrollHeroDownHolder;
   position: absolute;
   bottom: 5%;
@@ -279,12 +284,12 @@ Start: home_page
   cursor: pointer;
 }
 
-.template_page header .hero .hero_item > figcaption > .scrollHeroDownHolder img {
+header .hero .hero_item > figcaption > .scrollHeroDownHolder img {
   width: 50px;
   height: auto;
 }
 
-.template_page header .heroMenus ul.ribbonMenu {
+header .heroMenus ul.ribbonMenu {
   display: grid;
   grid-template-columns: repeat(auto-fill, 112px);
   grid-auto-flow: column;
@@ -296,11 +301,11 @@ Start: home_page
   /* Firefox */
 }
 
-.template_page header .heroMenus ul.ribbonMenu::-webkit-scrollbar {
+header .heroMenus ul.ribbonMenu::-webkit-scrollbar {
   display: none;
 }
 
-.template_page header .heroMenus ul.ribbonMenu li {
+header .heroMenus ul.ribbonMenu li {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
   font-size: 11px;
@@ -329,47 +334,47 @@ Start: home_page
   transition-property: background-color, color;
 }
 
-.template_page header .heroMenus ul.ribbonMenu li:hover {
+header .heroMenus ul.ribbonMenu li:hover {
   background-color: var(--lightBlue_chub);
 }
 
-.template_page header .heroMenus ul.ribbonMenu li a {
+header .heroMenus ul.ribbonMenu li a {
   text-decoration: none;
   color: inherit;
 }
 
 @media (max-width: 768px) {
-  .template_page footer {
+  header {
     border: solid 5px purple;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  .template_page footer {
+  header {
     border: solid 5px green;
   }
-  .template_page header .hero .hero_item > figcaption {
+  header .hero .hero_item > figcaption {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 1fr;
     grid-template-areas: "logoHolder heroContent";
     z-index: 2;
     grid-gap: 2rem;
   }
-  .template_page header .hero .hero_item > figcaption > .logoHolder {
+  header .hero .hero_item > figcaption > .logoHolder {
     justify-self: start;
     align-self: center;
     margin: 0 0;
   }
-  .template_page header .hero .hero_item > figcaption > .heroContent {
+  header .hero .hero_item > figcaption > .heroContent {
     justify-self: start;
     align-self: center;
     margin-top: 35%;
     width: 60%;
   }
-  .template_page header .heroMenus {
+  header .heroMenus {
     background-color: red;
   }
-  .template_page header .heroMenus ul.ribbonMenu {
+  header .heroMenus ul.ribbonMenu {
     display: grid;
     grid-template-columns: repeat(auto-fill, 252px);
     grid-auto-columns: 252px;
@@ -378,32 +383,32 @@ Start: home_page
 }
 
 @media (min-width: 993px) {
-  .template_page footer {
+  header {
     border: solid 5px violet;
   }
-  .template_page header .hero .hero_item > figcaption {
+  header .hero .hero_item > figcaption {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 1fr;
     grid-template-areas: "logoHolder heroContent";
     z-index: 2;
     grid-gap: 2rem;
   }
-  .template_page header .hero .hero_item > figcaption > .logoHolder {
+  header .hero .hero_item > figcaption > .logoHolder {
     justify-self: start;
     align-self: center;
     margin: 0 0;
   }
-  .template_page header .hero .hero_item > figcaption > .heroContent {
+  header .hero .hero_item > figcaption > .heroContent {
     justify-self: start;
     align-self: center;
     margin-top: 15%;
     min-width: 30%;
     max-width: 40%;
   }
-  .template_page header .heroMenus {
+  header .heroMenus {
     background-color: red;
   }
-  .template_page header .heroMenus ul.ribbonMenu {
+  header .heroMenus ul.ribbonMenu {
     display: grid;
     grid-template-columns: repeat(auto-fill, 512px);
     grid-auto-columns: 512px;
@@ -411,6 +416,12 @@ Start: home_page
   }
 }
 
+/*
+End: header
+*/
+/*
+Start: home_page
+*/
 /*
 End: home_page
 */

@@ -11,6 +11,22 @@ Start: Common presets
 
 
 /*
+Start: header
+*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    @import './globals/header';
+}
+
+
+/*
+End: header
+*/
+
+
+/*
 Start: home_page
 */
 
