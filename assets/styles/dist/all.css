@@ -284,6 +284,60 @@ Start: home_page
   height: auto;
 }
 
+.template_page header .heroMenus ul.ribbonMenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, clamp(112px, 128px, 191.75px));
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(112px, 128px, 191.75px);
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.template_page header .heroMenus ul.ribbonMenu::-webkit-scrollbar {
+  display: none;
+}
+
+.template_page header .heroMenus ul.ribbonMenu li {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 11px;
+  text-decoration: white;
+  text-align: center;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+  border: 1px;
+  border-left: 1px solid #0E1E23;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  background-color: var(--veryDarkBlue_chub);
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+  transition-property: background-color, color;
+}
+
+.template_page header .heroMenus ul.ribbonMenu li:hover {
+  background-color: var(--lightBlue_chub);
+}
+
+.template_page header .heroMenus ul.ribbonMenu li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (max-width: 768px) {
   .template_page footer {
     border: solid 5px purple;
@@ -311,6 +365,15 @@ Start: home_page
     align-self: center;
     margin-top: 35%;
     width: 60%;
+  }
+  .template_page header .hero .heroMenus {
+    background-color: red;
+  }
+  .template_page header .hero .heroMenus ul.ribbonMenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, clamp(191.75px, 252px 255.55px));
+    grid-auto-columns: clamp(191.75px, 252px 255.55px);
+    background-color: red;
   }
 }
 

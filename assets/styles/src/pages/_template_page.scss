@@ -93,7 +93,62 @@ header {
             }
         }
     }
-    .ribbonMenu {}
+    .heroMenus {
+        ul.ribbonMenu {
+            display: grid;
+            // grid-template-columns: repeat(auto-fill, 512px);
+            grid-template-columns: repeat(auto-fill, clamp(112px, 128px, 191.75px));
+            grid-auto-flow: column;
+            // grid-auto-columns: 512px;
+            grid-auto-columns: clamp(112px, 128px, 191.75px);
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            li {
+                /* Font & Text */
+                font-family: "Gotham A", "Gotham B";
+                font-size: 11px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 500;
+                letter-spacing: normal;
+                line-height: 11px;
+                text-decoration: rgb(255, 255, 255);
+                text-align: center;
+                text-indent: 0px;
+                text-transform: uppercase;
+                vertical-align: baseline;
+                white-space: normal;
+                word-spacing: 0px;
+                color: rgb(255, 255, 255);
+                border: 1px;
+                // border-right: solid 1px var(--white_chub);
+                border-left: 1px solid #0E1E23;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 75px;
+                // width: 512px;
+                background-color: var(--veryDarkBlue_chub);
+                transition: .4s cubic-bezier(0.25, .46, .45, .94);
+                transition-property: all;
+                -webkit-transition-property: background-color, color;
+                transition-property: background-color, color;
+                &:hover {
+                    background-color: var(--lightBlue_chub);
+                }
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
 }
 
 main {}
@@ -132,8 +187,16 @@ main {}
                     }
                 }
             }
+            .heroMenus {
+                background-color: red;
+                ul.ribbonMenu {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, clamp( 191.75px, 252px 255.55px));
+                    grid-auto-columns: clamp( 191.75px, 252px 255.55px);
+                    background-color: red;
+                }
+            }
         }
-        .ribbonMenu {}
     }
 }
 
@@ -166,6 +229,6 @@ main {}
                 }
             }
         }
-        .ribbonMenu {}
+        .heroMenus {}
     }
 }

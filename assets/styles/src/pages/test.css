@@ -1,29 +1,29 @@
-div .blue-overlay {
+a {
     /* Font & Text */
     font-family: "Gotham A", "Gotham B";
-    font-size: 14px;
+    font-size: 11px;
     font-style: normal;
     font-variant: normal;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 20px;
-    text-decoration: rgb(51, 51, 51);
-    text-align: start;
+    line-height: 11px;
+    text-decoration: rgb(255, 255, 255);
+    text-align: center;
     text-indent: 0px;
-    text-transform: none;
+    text-transform: uppercase;
     vertical-align: baseline;
     white-space: normal;
     word-spacing: 0px;
     /* Color & Background */
     background-attachment: scroll;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(0, 16, 24);
     background-image: none;
     background-position: 0% 0%;
     background-repeat: repeat;
-    color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
     /* Box */
-    height: 0px;
-    width: 767px;
+    height: 75px;
+    width: 512px;
     border: ;
     border-top: ;
     border-right: ;
@@ -41,13 +41,13 @@ div .blue-overlay {
     bottom: auto;
     right: auto;
     left: auto;
-    float: none;
+    float: left;
     display: block;
     clear: none;
     z-index: auto;
     /* List */
     list-style-image: none;
-    list-style-type: disc;
+    list-style-type: none;
     list-style-position: outside;
     /* Table */
     border-collapse: separate;
@@ -57,7 +57,7 @@ div .blue-overlay {
     table-layout: auto;
     /* Miscellaneous */
     overflow: visible;
-    cursor: auto;
+    cursor: pointer;
     visibility: visible;
     /* Effects */
     transform: none;
