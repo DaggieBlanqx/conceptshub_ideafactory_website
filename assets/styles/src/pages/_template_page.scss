@@ -1,11 +1,11 @@
 header {
     .hero {
-        height: 90vh;
+        height: 100vh;
         width: 100%;
         .hero_item {
             position: relative;
             height: 100%;
-            width: 100;
+            width: 100%;
             &::after {
                 content: "";
                 position: absolute;
@@ -16,8 +16,7 @@ header {
                 z-index: 1;
                 // background: linear-gradient(to right, rgba(65, 0, 255, 0.4), rgba(255, 0, 232, 0.3));
                 // background-color: var(--darkBlue_chub);
-                background-color: rgba(4, 31, 52, 1);
-                // opacity: .75;
+                background-color: #041f34;
                 opacity: 1;
                 mix-blend-mode: hard-light;
             }
@@ -28,7 +27,6 @@ header {
                 object-fit: cover;
                 height: 100%;
                 width: 100%;
-                // border: solid yellow 3px;
             }
             &>figcaption {
                 position: absolute;
@@ -36,42 +34,39 @@ header {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
-                // color: white;
                 display: grid;
-                grid-template-columns: 1fr 3fr;
-                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, auto);
+                grid-template-areas: "logoHolder ""heroContent";
                 z-index: 2;
                 &>.logoHolder {
-                    justify-self: start;
-                    align-self: center;
+                    grid-area: logoHolder;
+                    display: grid;
+                    justify-content: start;
+                    align-items: end;
                     img {
                         width: 150px;
                         height: auto;
                     }
+                    margin: 0 var(--bothVerticalSidesBodyPadding);
                 }
                 &>.heroContent {
+                    padding: 0 var(--bothVerticalSidesBodyPadding);
+                    width: 80%;
+                    grid-area: heroContent;
                     justify-self: start;
                     align-self: center;
-                    margin: 0 var(--bothVerticalSidesBodyPadding);
-                    padding: 80px 15px;
                     display: grid;
-                    // grid-template-rows: 3fr 1fr 3fr 3fr;
-                    grid-template-rows: repeat(5, auto-fit);
+                    grid-template-rows: repeat(4, auto);
                     grid-template-columns: 1fr 3fr;
                     grid-gap: 1rem;
-                    grid-template-areas: "_smallTitle _smallTitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
-                    .card_smallTitle {
-                        grid-area: _smallTitle;
-                    }
-                    .card_separator {
-                        grid-area: _separator;
-                    }
+                    grid-template-areas: " _bigSubtitle  _bigSubtitle""_separator _separator""_content _content""_button _button";
                     .card_bigSubtitle {
                         grid-area: _bigSubtitle;
                         color: var(--white_chub);
+                    }
+                    .card_separator {
+                        grid-area: _separator;
                     }
                     .card_content {
                         grid-area: _content;
@@ -82,6 +77,17 @@ header {
                         background-color: transparent;
                         height: 70px;
                         width: 70px;
+                    }
+                }
+                &>.scrollHeroDownHolder {
+                    grid-area: scrollHeroDownHolder;
+                    position: absolute;
+                    bottom: 5%;
+                    right: 5%;
+                    cursor: pointer;
+                    img {
+                        width: 50px;
+                        height: auto;
                     }
                 }
             }
@@ -104,11 +110,62 @@ main {}
     footer {
         border: solid 5px green;
     }
+    header {
+        .hero {
+            .hero_item {
+                &>figcaption {
+                    grid-template-columns: repeat(2, auto);
+                    grid-template-rows: 1fr;
+                    grid-template-areas: "logoHolder heroContent";
+                    z-index: 2;
+                    grid-gap: 2rem;
+                    &>.logoHolder {
+                        justify-self: start;
+                        align-self: center;
+                        margin: 0 0;
+                    }
+                    &>.heroContent {
+                        justify-self: start;
+                        align-self: center;
+                        margin-top: 35%;
+                        width: 60%;
+                    }
+                }
+            }
+        }
+        .ribbonMenu {}
+    }
 }
 
 @include media(">tablet") {
     //every device bigger than tablet
     footer {
         border: solid 5px violet;
+    }
+    header {
+        .hero {
+            .hero_item {
+                &>figcaption {
+                    grid-template-columns: repeat(2, auto);
+                    grid-template-rows: 1fr;
+                    grid-template-areas: "logoHolder heroContent";
+                    z-index: 2;
+                    grid-gap: 2rem;
+                    &>.logoHolder {
+                        justify-self: start;
+                        align-self: center;
+                        margin: 0 0;
+                    }
+                    &>.heroContent {
+                        justify-self: start;
+                        align-self: center;
+                        margin-top: 15%;
+                        min-width: 30%;
+                        max-width: 40%;
+                    }
+                }
+            }
+        }
+        .ribbonMenu {}
     }
 }
