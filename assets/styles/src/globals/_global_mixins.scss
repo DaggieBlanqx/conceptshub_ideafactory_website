@@ -1,3 +1,26 @@
+@mixin responsiveBorder($device, $part) {
+    @if $device==phone {
+        $part {
+            // border: solid 5px purple;
+        }
+    }
+    @else if $device==tablet {
+        $part {
+            // border: solid 5px green;
+        }
+    }
+    @else if $device==desktop {
+        $part {
+            // border: solid 5px violet;
+        }
+    }
+    @else {
+        $part {
+            border: none;
+        }
+    }
+}
+
 @mixin containWithin80Percent {
     width: 80%;
     margin: 0 auto;
