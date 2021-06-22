@@ -410,7 +410,7 @@ End: header
 /*
 Start: home_page
 */
-.template_page main section .digitalCreativeAgency {
+.home_page section .digitalCreativeAgency {
   margin: 0 var(--bothVerticalSidesBodyPadding);
   padding: 80px 15px;
   display: grid;
@@ -420,73 +420,49 @@ Start: home_page
   grid-template-areas: "_smallTitle _smallTitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
 }
 
-.template_page main section .digitalCreativeAgency .card_smallTitle {
+.home_page section .digitalCreativeAgency .card_smallTitle {
   grid-area: _smallTitle;
 }
 
-.template_page main section .digitalCreativeAgency .card_separator {
+.home_page section .digitalCreativeAgency .card_separator {
   grid-area: _separator;
 }
 
-.template_page main section .digitalCreativeAgency .card_bigSubtitle {
+.home_page section .digitalCreativeAgency .card_bigSubtitle {
   grid-area: _bigSubtitle;
 }
 
-.template_page main section .digitalCreativeAgency .card_content {
+.home_page section .digitalCreativeAgency .card_content {
   grid-area: _content;
 }
 
-.template_page main section .digitalCreativeAgency .card_button {
+.home_page section .digitalCreativeAgency .card_button {
   grid-area: _button;
   background-color: transparent;
 }
 
-.template_page main section {
-  width: 100%;
-  margin: 0 auto;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.template_page main section .featuredWorks {
+.home_page section .featuredWorks {
+  min-height: 10px;
+  background-color: rebeccapurple;
   display: grid;
-  grid-template-rows: repeat(auto-fit, 1fr);
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
 }
 
-.template_page main section .featuredWorks .featuredWork {
+.home_page section .featuredWorks .featuredWork {
   background-color: red;
   position: relative;
-  min-height: 388.3px;
 }
 
-.template_page main section .featuredWorks .featuredWork::after {
-  content: "";
-  position: absolute;
-  opacity: 1;
-  width: 100%;
-  height: 35%;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-}
-
-.template_page main section .featuredWorks .featuredWork:hover {
-  opacity: .9;
-  transition: all .15s ease-out;
-}
-
-.template_page main section .featuredWorks .featuredWork .featuredWork_image {
+.home_page section .featuredWorks .featuredWork .featuredWork_image {
   position: absolute;
   top: 0;
   left: 0;
   object-fit: cover;
-  height: 100%;
   width: 100%;
 }
 
-.template_page main section .featuredWorks .featuredWork .featuredWork_caption {
+.home_page section .featuredWorks .featuredWork .featuredWork_caption {
   position: absolute;
   bottom: 5%;
   left: 5%;
@@ -497,7 +473,7 @@ Start: home_page
   padding-bottom: 40px;
 }
 
-.template_page main section .featuredWorks .featuredWork .featuredWork_caption > .featuredWork_title {
+.home_page section .featuredWorks .featuredWork .featuredWork_caption > .featuredWork_title {
   font-family: "Libre Baskerville", serif;
   font-size: 35px;
   font-style: normal;
@@ -515,7 +491,7 @@ Start: home_page
   color: white;
 }
 
-.template_page main section .featuredWorks .featuredWork .featuredWork_caption > .featuredWork_subtitle {
+.home_page section .featuredWorks .featuredWork .featuredWork_caption > .featuredWork_subtitle {
   font-family: "Gotham A", "Gotham B";
   font-size: 16px;
   font-style: normal;
@@ -533,37 +509,35 @@ Start: home_page
   color: #f6f6f6;
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
-  .template_page main section .featuredWorks {
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: 1fr 1fr;
-  }
-  .template_page main section .featuredWorks > .featuredWork {
-    min-height: 251.1px;
-  }
+.home_page section .featuredWorks .featuredWork::after {
+  content: "";
+  position: absolute;
+  opacity: 1;
+  width: 100%;
+  height: 35%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+.home_page section .featuredWorks .featuredWork:hover {
+  opacity: .9;
+  transition: all .15s ease-out;
 }
 
 @media (min-width: 993px) {
-  .template_page main section .digitalCreativeAgency {
+  .home_page section .digitalCreativeAgency {
     grid-template-rows: repeat(4, auto);
     margin: 0 auto;
     max-width: 1170px;
     grid-template-areas: "_smallTitle  _bigSubtitle" "_smallTitle  _separator" "_smallTitle _content" "_smallTitle _button";
   }
-  .template_page main section .digitalCreativeAgency .card_smallTitle {
+  .home_page section .digitalCreativeAgency .card_smallTitle {
     max-width: 80%;
   }
-  .template_page main section .digitalCreativeAgency .card_bigSubtitle {
+  .home_page section .digitalCreativeAgency .card_bigSubtitle {
     max-width: 80%;
-  }
-  .template_page main section .featuredWorks {
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: 1fr 1fr;
-  }
-  .template_page main section .featuredWorks > .featuredWork {
-    min-height: 330px;
-    width: 100%;
-    height: auto;
   }
 }
 
