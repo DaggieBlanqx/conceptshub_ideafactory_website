@@ -172,6 +172,18 @@ Start: Common presets
   background-color: var(--veryDarkBlue_chub);
 }
 
+.bg_f6f6f6 {
+  background-color: #f6f6f6 !important;
+}
+
+.bg_fff {
+  background-color: #fff !important;
+}
+
+.bg_eaeaea {
+  background-color: #eaeaea !important;
+}
+
 /*
 Start: Common presets
 */
@@ -371,6 +383,15 @@ header .heroMenus ul.ribbonMenu li a {
     grid-auto-columns: 252px;
     background-color: red;
   }
+  header .heroMenus div.mainMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 3;
+    background: red;
+    width: 100%;
+  }
 }
 
 @media (min-width: 993px) {
@@ -402,6 +423,47 @@ header .heroMenus ul.ribbonMenu li a {
     grid-auto-columns: 303px;
     background-color: red;
   }
+  header .heroMenus div.mainMenu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 3;
+    width: 100%;
+    background-color: #031e32;
+    background-image: linear-gradient(to top left, #123458, #071626);
+  }
+  header .heroMenus div.mainMenu ul {
+    margin-right: 20%;
+  }
+  header .heroMenus div.mainMenu ul li {
+    /* Font & Text */
+    font-family: "Libre Baskerville";
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 55px;
+    text-align: right;
+    text-indent: 0px;
+    text-transform: capitalize;
+    vertical-align: middle;
+    white-space: normal;
+    word-spacing: 0px;
+  }
+  header .heroMenus div.mainMenu ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-property: all;
+  }
+  header .heroMenus div.mainMenu ul li a:hover {
+    color: var(--lightBlue_chub);
+  }
 }
 
 /*
@@ -410,6 +472,12 @@ End: header
 /*
 Start: home_page
 */
+.home_page section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
 .home_page .digitalCreativeAgency {
   margin: 0 var(--bothVerticalSidesBodyPadding);
   padding: 80px 15px;
@@ -778,6 +846,31 @@ Start: home_page
   color: #333333;
 }
 
+.home_page .clientsAndPartners {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.home_page .clientsAndPartners .brandLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_page .clientsAndPartners .brandLogo img {
+  height: 100px;
+  width: 100px;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .home_page .clientsAndPartners {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (min-width: 993px) {
   .home_page .digitalCreativeAgency {
     grid-template-rows: repeat(4, auto);
@@ -825,6 +918,9 @@ Start: home_page
   .home_page .serviceDifferences {
     grid-template-columns: repeat(2, 1fr);
   }
+  .home_page .clientsAndPartners {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /*
@@ -866,7 +962,6 @@ footer .firstRow .contactUs .card_content {
 
 footer .firstRow .contactUs .card_button {
   grid-area: _button;
-  background-color: transparent;
 }
 
 footer .firstRow .findUs {

@@ -1,3 +1,9 @@
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #fff;
+}
+
 .digitalCreativeAgency {
     margin: 0 var(--bothVerticalSidesBodyPadding);
     padding: 80px 15px;
@@ -335,12 +341,31 @@
     }
 }
 
+.clientsAndPartners {
+    @include containWithinPercent(90%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    .brandLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    }
+}
+
 @include media("<=phone") {
     //every device smaller than phone
 }
 
 @include media(">phone", "<=tablet") {
     //every device between phone and tablet
+    .clientsAndPartners {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @include media(">tablet") {
@@ -393,5 +418,8 @@
     }
     .serviceDifferences {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .clientsAndPartners {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

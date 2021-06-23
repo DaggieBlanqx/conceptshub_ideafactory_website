@@ -187,6 +187,15 @@
             grid-auto-columns: 252px;
             background-color: red;
         }
+        div.mainMenu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            z-index: 3;
+            background: red;
+            width: 100%;
+        }
     }
 }
 
@@ -223,6 +232,47 @@
             grid-template-columns: repeat(auto-fill, 303px);
             grid-auto-columns: 303px;
             background-color: red;
+        }
+        div.mainMenu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            z-index: 3;
+            width: 100%;
+            background-color: #031e32;
+            background-image: linear-gradient(to top left, #123458, #071626);
+            ul {
+                margin-right: 20%;
+                li {
+                    /* Font & Text */
+                    font-family: "Libre Baskerville";
+                    font-size: 30px;
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: 500;
+                    letter-spacing: normal;
+                    line-height: 55px;
+                    text-align: right;
+                    text-indent: 0px;
+                    text-transform: capitalize;
+                    vertical-align: middle;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    a {
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        transition: .4s cubic-bezier(0.25, .46, .45, .94);
+                        transition-property: all;
+                        &:hover {
+                            color: var(--lightBlue_chub);
+                        }
+                    }
+                }
+            }
         }
     }
 }

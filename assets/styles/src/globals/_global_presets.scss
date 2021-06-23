@@ -110,7 +110,6 @@ $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
     color: rgb(255, 255, 255);
     transition: .4s cubic-bezier(0.25, .46, .45, .94);
     transition-property: all;
-    -webkit-transition-property: background-color, color;
     transition-property: background-color, color;
     cursor: pointer;
     display: flex;
@@ -120,4 +119,16 @@ $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
     &:hover {
         background-color: var(--veryDarkBlue_chub);
     }
+}
+
+.bg_f6f6f6 {
+    background-color: #f6f6f6!important;
+}
+
+.bg_fff {
+    background-color: #fff!important;
+}
+
+.bg_eaeaea {
+    background-color: #eaeaea!important;
 }

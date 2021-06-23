@@ -23,14 +23,11 @@
         }
         .card_button {
             grid-area: _button;
-            background-color: transparent;
         }
     }
     .findUs {
         display: grid;
         figure {
-            // max-width: 767px;
-            // height: 277.5px;
             display: flex;
             flex-direction: column;
             gap: .2rem;
