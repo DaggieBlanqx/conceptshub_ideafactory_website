@@ -284,11 +284,6 @@ Start: Common presets
 /*
 Start: header
 */
-header {
-  display: flex;
-  flex-direction: column;
-}
-
 header .hero {
   height: 100vh;
   width: 100%;
@@ -476,46 +471,7 @@ header .heroMenus ul.ribbonMenu li a {
     width: 60%;
   }
   header .hero .hero_item > figcaption > .mainMenu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    z-index: 3;
-    background: red;
     width: 100%;
-  }
-  header .heroMenus {
-    background-color: red;
-  }
-  header .heroMenus ul.ribbonMenu {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 252px);
-    grid-auto-columns: 252px;
-    background-color: red;
-  }
-}
-
-@media (min-width: 993px) {
-  header .hero .hero_item > figcaption {
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: 1fr;
-    grid-template-areas: "logoHolder heroContent";
-    z-index: 2;
-    grid-gap: 2rem;
-  }
-  header .hero .hero_item > figcaption > .logoHolder {
-    justify-self: start;
-    align-self: center;
-    margin: 0 0;
-  }
-  header .hero .hero_item > figcaption > .heroContent {
-    justify-self: start;
-    align-self: center;
-    margin-top: 15%;
-    min-width: 30%;
-    max-width: 40%;
-  }
-  header .hero .hero_item > figcaption > .mainMenu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -558,14 +514,37 @@ header .heroMenus ul.ribbonMenu li a {
   header .hero .hero_item > figcaption > .mainMenu ul li a:hover {
     color: var(--lightBlue_chub);
   }
-  header .heroMenus {
-    background-color: red;
+  header .heroMenus ul.ribbonMenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 252px);
+    grid-auto-columns: 252px;
+  }
+}
+
+@media (min-width: 993px) {
+  header .hero .hero_item > figcaption {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    grid-template-areas: "logoHolder heroContent";
+    z-index: 2;
+    grid-gap: 2rem;
+  }
+  header .hero .hero_item > figcaption > .logoHolder {
+    justify-self: start;
+    align-self: center;
+    margin: 0 0;
+  }
+  header .hero .hero_item > figcaption > .heroContent {
+    justify-self: start;
+    align-self: center;
+    margin-top: 15%;
+    min-width: 30%;
+    max-width: 40%;
   }
   header .heroMenus ul.ribbonMenu {
     display: grid;
     grid-template-columns: repeat(auto-fill, 303px);
     grid-auto-columns: 303px;
-    background-color: red;
   }
 }
 
