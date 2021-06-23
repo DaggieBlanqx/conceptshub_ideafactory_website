@@ -38,6 +38,13 @@
             grid-template-rows: repeat(2, auto);
             grid-template-areas: "logoHolder ""heroContent";
             z-index: 2;
+            &>.hamMenu {
+                position: absolute;
+                top: 5%;
+                right: 5%;
+                cursor: pointer;
+                z-index: 5;
+            }
             &>.logoHolder {
                 grid-area: logoHolder;
                 display: grid;
@@ -79,7 +86,7 @@
                 }
             }
             &>.scrollHeroDownHolder {
-                grid-area: scrollHeroDownHolder;
+                // grid-area: scrollHeroDownHolder;
                 position: absolute;
                 bottom: 5%;
                 right: 5%;
@@ -91,10 +98,6 @@
             }
         }
     }
-}
-
-input.openOverlayMenu:checked+.mainMenu {
-    transform: translateY(0);
 }
 
 .heroMenus {
@@ -178,6 +181,15 @@ input.openOverlayMenu:checked+.mainMenu {
                     margin-top: 35%;
                     width: 60%;
                 }
+                &>.mainMenu {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100vh;
+                    z-index: 3;
+                    background: red;
+                    width: 100%;
+                }
             }
         }
     }
@@ -190,15 +202,6 @@ input.openOverlayMenu:checked+.mainMenu {
             grid-template-columns: repeat(auto-fill, 252px);
             grid-auto-columns: 252px;
             background-color: red;
-        }
-        div.mainMenu {
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            z-index: 3;
-            background: red;
-            width: 100%;
         }
     }
 }
@@ -226,6 +229,49 @@ input.openOverlayMenu:checked+.mainMenu {
                     min-width: 30%;
                     max-width: 40%;
                 }
+                &>.mainMenu {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100vh;
+                    z-index: 3;
+                    width: 100%;
+                    background-color: #031e32;
+                    background-image: linear-gradient(to top left, #123458, #071626);
+                    transition: .6s;
+                    transform: translateY(-100vh);
+                    ul {
+                        margin-right: 20%;
+                        li {
+                            /* Font & Text */
+                            font-family: "Libre Baskerville";
+                            font-size: 30px;
+                            font-style: normal;
+                            font-variant: normal;
+                            font-weight: 500;
+                            letter-spacing: normal;
+                            line-height: 55px;
+                            text-align: right;
+                            text-indent: 0px;
+                            text-transform: capitalize;
+                            vertical-align: middle;
+                            white-space: normal;
+                            word-spacing: 0px;
+                            a {
+                                text-decoration: none;
+                                color: rgb(255, 255, 255);
+                                transition: .4s cubic-bezier(0.25, .46, .45, .94);
+                                transition-property: all;
+                                &:hover {
+                                    color: var(--lightBlue_chub);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -236,49 +282,6 @@ input.openOverlayMenu:checked+.mainMenu {
             grid-template-columns: repeat(auto-fill, 303px);
             grid-auto-columns: 303px;
             background-color: red;
-        }
-        div.mainMenu {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            z-index: 3;
-            width: 100%;
-            background-color: #031e32;
-            background-image: linear-gradient(to top left, #123458, #071626);
-            transition: .6s;
-            transform: translateY(-100vh);
-            ul {
-                margin-right: 20%;
-                li {
-                    /* Font & Text */
-                    font-family: "Libre Baskerville";
-                    font-size: 30px;
-                    font-style: normal;
-                    font-variant: normal;
-                    font-weight: 500;
-                    letter-spacing: normal;
-                    line-height: 55px;
-                    text-align: right;
-                    text-indent: 0px;
-                    text-transform: capitalize;
-                    vertical-align: middle;
-                    white-space: normal;
-                    word-spacing: 0px;
-                    a {
-                        text-decoration: none;
-                        color: rgb(255, 255, 255);
-                        transition: .4s cubic-bezier(0.25, .46, .45, .94);
-                        transition-property: all;
-                        &:hover {
-                            color: var(--lightBlue_chub);
-                        }
-                    }
-                }
-            }
         }
     }
 }

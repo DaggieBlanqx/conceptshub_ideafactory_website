@@ -23,6 +23,13 @@
                 </video>
                 <!-- <img class="hero_bg" src="https://www.craftedny.com/wp-content/uploads/2018/03/branding-hero-800x450.jpg" alt=""> -->
                 <figcaption>
+                    <div class="hamMenu">
+                        <button class="c-hamburger c-hamburger--htx">
+                            <span>toggle menu</span>
+                        </button>
+                    </div>
+
+
                     <div class="logoHolder">
                         <img src="https://www.craftedny.com/wp-content/themes/custom-theme/img/crafted-box-logo.svg" alt="">
                     </div>
@@ -34,10 +41,22 @@
                             <img src="https://www.craftedny.com/wp-content/uploads/2020/12/video-play-icon.svg" alt="">
                         </a>
                     </div>
+
+
+
                     <a href="" class="scrollHeroDownHolder">
                         <img src="https://www.craftedny.com/wp-content/uploads/2020/12/see-more-btn.svg" alt="">
-                        <input type="checkbox" name="" id="" class="openOverlayMenu">
                     </a>
+
+                    <div class="mainMenu">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Work</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href=""> Digital Talk</a></li>
+                        </ul>
+                    </div>
 
                 </figcaption>
             </figure>
@@ -60,16 +79,8 @@
                 <li><a href="">Marketing</a></li>
                 <li><a href="">Technology</a></li>
             </ul>
-            <span class="hamburgerMenuIcon"></span>
-            <div class="mainMenu">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Work</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href=""> Digital Talk</a></li>
-                </ul>
-            </div>
+            <!-- <span class="hamburgerMenuIcon"></span> -->
+
 
         </section>
     </header>
@@ -596,5 +607,27 @@
         </section>
     </footer>
 </body>
+<script>
+    (function() {
+
+        "use strict";
+        var hamMenu = document.querySelector('.c-hamburger')
+        toggleHandler(hamMenu);
+
+        function toggleHandler(toggle) {
+            toggle.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (this.classList.contains("is-active")) {
+                    document.querySelector('.mainMenu').classList.remove('openMenu');
+                    this.classList.remove("is-active");
+                } else {
+                    document.querySelector('.mainMenu').classList.add('openMenu');
+                    this.classList.add("is-active");
+                };
+            });
+        }
+
+    })();
+</script>
 
 </html>
