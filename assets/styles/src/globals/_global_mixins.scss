@@ -26,6 +26,11 @@
     margin: 0 auto;
 }
 
+@mixin containWithinPercent($percentWidth:80%) {
+    width: $percentWidth;
+    margin: 0 auto;
+}
+
 @mixin title_footerMenu {
     font-family: "Gotham A", "Gotham B";
     font-size: 13px;

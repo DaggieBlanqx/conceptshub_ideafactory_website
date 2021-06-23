@@ -155,7 +155,6 @@
 
 @include media(">phone", "<=tablet") {
     //every device between phone and tablet
-    //border: solid 5px green;
     .hero {
         .hero_item {
             &>figcaption {
