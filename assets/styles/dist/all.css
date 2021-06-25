@@ -186,6 +186,7 @@ Start: Common presets
 
 .openMenu {
   transform: translateY(0) !important;
+  background-color: rebeccapurple;
 }
 
 /**/
@@ -278,6 +279,27 @@ Start: Common presets
   transition-delay: 0s, 0.3s;
 }
 
+.stucknow {
+  background: var(--lightBlue_chub) !important;
+}
+
+.stucknow .c-hamburger span {
+  background: var(--darkBlue_chub);
+}
+
+.stucknow .c-hamburger span::before,
+.stucknow .c-hamburger span::after {
+  background-color: var(--darkBlue_chub) !important;
+}
+
+.stucknow .c-hamburger--htx.is-active {
+  background-color: none !important;
+}
+
+.stucknow .c-hamburger--htx.is-active span {
+  background-color: none !important;
+}
+
 /*
 Start: Common presets
 */
@@ -330,14 +352,6 @@ header .hero .hero_item > figcaption {
   z-index: 2;
 }
 
-header .hero .hero_item > figcaption > .hamMenu {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  cursor: pointer;
-  z-index: 5;
-}
-
 header .hero .hero_item > figcaption > .logoHolder {
   grid-area: logoHolder;
   display: grid;
@@ -358,10 +372,49 @@ header .hero .hero_item > figcaption > .heroContent {
   justify-self: start;
   align-self: center;
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
   grid-template-columns: 1fr 3fr;
   grid-gap: 1rem;
-  grid-template-areas: " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
+  grid-template-areas: "pretitle pretitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
+}
+
+header .hero .hero_item > figcaption > .heroContent .pretitle {
+  grid-area: pretitle;
+  background-color: transparent;
+}
+
+header .hero .hero_item > figcaption > .heroContent .pretitle span {
+  display: inline-flex;
+  grid-column: 30px;
+  font-family: "Gotham A", "Gotham B";
+  font-size: 9px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 9.9px;
+  text-decoration: white;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+  min-height: 30px;
+  background-color: var(--darkBlue_chub);
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+  align-items: center;
+}
+
+header .hero .hero_item > figcaption > .heroContent .pretitle span:hover {
+  background-color: var(--lightBlue_chub);
+}
+
+header .hero .hero_item > figcaption > .heroContent .pretitle span::before, header .hero .hero_item > figcaption > .heroContent .pretitle span::after {
+  content: " ";
+  width: 10px;
 }
 
 header .hero .hero_item > figcaption > .heroContent .card_bigSubtitle {
@@ -397,7 +450,38 @@ header .hero .hero_item > figcaption > .scrollHeroDownHolder img {
   height: auto;
 }
 
+header .heroMenus .hamMenu {
+  /*// position: sticky;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        cursor: pointer;
+        z-index: 6;
+        height: 75px;
+        // left: 2382px;    
+        // left: 94%; 
+        top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        */
+  position: absolute;
+  top: 5%;
+  cursor: pointer;
+  z-index: 6;
+  height: 75px;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  left: 95%;
+}
+
 header .heroMenus ul.ribbonMenu {
+  position: relative;
+  z-index: 4;
   display: grid;
   grid-template-columns: repeat(auto-fill, 112px);
   grid-auto-flow: column;
@@ -451,6 +535,56 @@ header .heroMenus ul.ribbonMenu li a {
   color: inherit;
 }
 
+header .heroMenus .mainMenu {
+  background: red;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 5;
+  width: 100%;
+  background-color: #031e32;
+  background-image: linear-gradient(to top left, #123458, #071626);
+  transition: .6s;
+  transform: translateY(-100vh);
+}
+
+header .heroMenus .mainMenu ul {
+  margin-right: 20%;
+}
+
+header .heroMenus .mainMenu ul li {
+  /* Font & Text */
+  font-family: "Libre Baskerville";
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 55px;
+  text-align: right;
+  text-indent: 0px;
+  text-transform: capitalize;
+  vertical-align: middle;
+  white-space: normal;
+  word-spacing: 0px;
+}
+
+header .heroMenus .mainMenu ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+}
+
+header .heroMenus .mainMenu ul li a:hover {
+  color: var(--lightBlue_chub);
+}
+
 @media (min-width: 769px) and (max-width: 992px) {
   header .hero .hero_item > figcaption {
     grid-template-columns: repeat(2, auto);
@@ -469,50 +603,6 @@ header .heroMenus ul.ribbonMenu li a {
     align-self: center;
     margin-top: 35%;
     width: 60%;
-  }
-  header .hero .hero_item > figcaption > .mainMenu {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    z-index: 3;
-    width: 100%;
-    background-color: #031e32;
-    background-image: linear-gradient(to top left, #123458, #071626);
-    transition: .6s;
-    transform: translateY(-100vh);
-  }
-  header .hero .hero_item > figcaption > .mainMenu ul {
-    margin-right: 20%;
-  }
-  header .hero .hero_item > figcaption > .mainMenu ul li {
-    /* Font & Text */
-    font-family: "Libre Baskerville";
-    font-size: 30px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 500;
-    letter-spacing: normal;
-    line-height: 55px;
-    text-align: right;
-    text-indent: 0px;
-    text-transform: capitalize;
-    vertical-align: middle;
-    white-space: normal;
-    word-spacing: 0px;
-  }
-  header .hero .hero_item > figcaption > .mainMenu ul li a {
-    text-decoration: none;
-    color: white;
-    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition-property: all;
-  }
-  header .hero .hero_item > figcaption > .mainMenu ul li a:hover {
-    color: var(--lightBlue_chub);
   }
   header .heroMenus ul.ribbonMenu {
     display: grid;
@@ -964,7 +1054,7 @@ Start: home_page
     max-width: 80%;
   }
   .home_page .digitalCreativeAgency .card_bigSubtitle {
-    max-width: 80%;
+    max-width: 50%;
   }
   .home_page .featuredWorks {
     grid-template-columns: repeat(2, 1fr);
@@ -1007,6 +1097,500 @@ Start: home_page
 
 /*
 End: home_page
+*/
+/*
+Start: branding_page
+*/
+.branding_page section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
+.branding_page .digitalCreativeAgency {
+  margin: 0 var(--bothVerticalSidesBodyPadding);
+  padding: 80px 15px;
+  display: grid;
+  grid-template-rows: repeat(5, auto-fit);
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1rem;
+  grid-template-areas: "_smallTitle _smallTitle" " _bigSubtitle  _bigSubtitle" "_separator _separator" "_content _content" "_button _button";
+}
+
+.branding_page .digitalCreativeAgency .card_smallTitle {
+  grid-area: _smallTitle;
+}
+
+.branding_page .digitalCreativeAgency .card_separator {
+  grid-area: _separator;
+}
+
+.branding_page .digitalCreativeAgency .card_bigSubtitle {
+  grid-area: _bigSubtitle;
+}
+
+.branding_page .digitalCreativeAgency .card_content {
+  grid-area: _content;
+}
+
+.branding_page .digitalCreativeAgency .card_button {
+  grid-area: _button;
+  background-color: transparent;
+}
+
+.branding_page .featuredWorks {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.branding_page .featuredWorks .featuredWork {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.branding_page .featuredWorks .featuredWork .featuredWork_image {
+  height: 100%;
+  width: 100%;
+  background-color: rebeccapurple;
+}
+
+.branding_page .featuredWorks .featuredWork .featuredWork_image img {
+  height: 100%;
+  width: 100%;
+}
+
+.branding_page .featuredWorks .featuredWork .featuredWork_caption {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.branding_page .featuredWorks .featuredWork .featuredWork_caption > * {
+  position: relative;
+  bottom: 5%;
+  left: 5%;
+  width: 95%;
+}
+
+.branding_page .featuredWorks .featuredWork .featuredWork_caption > .featuredWork_title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 35px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 38.5px;
+  text-decoration: white;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+}
+
+.branding_page .featuredWorks .featuredWork .featuredWork_caption > .featuredWork_subtitle {
+  font-family: "Gotham A", "Gotham B";
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 17.6px;
+  text-decoration: #f6f6f6;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #f6f6f6;
+}
+
+.branding_page .featuredWorks .featuredWork .featuredWork_caption:hover {
+  transition: all .15s ease-out;
+  background-color: #00101890;
+}
+
+.branding_page .seeMoreWork {
+  background-color: #031e32;
+  background-image: linear-gradient(to top left, #123458, #071626);
+  margin-top: 80px;
+}
+
+.branding_page .seeMoreWork span {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  min-height: 150px;
+  grid-gap: 1rem;
+  padding: 30px 0;
+}
+
+.branding_page .seeMoreWork span img {
+  width: 30px;
+  height: 30px;
+  justify-self: center;
+  align-self: end;
+}
+
+.branding_page .seeMoreWork span p {
+  font-family: "Gotham A", "Gotham B";
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 17px;
+  text-decoration: white;
+  text-align: center;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+  justify-self: center;
+  align-self: center;
+}
+
+.branding_page .seeMoreWork span a {
+  justify-self: center;
+  align-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45.9667px;
+  width: 235.183px;
+  border: 3px solid #fff;
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 15.9667px;
+  text-decoration: white;
+  text-align: center;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-spacing: 0px;
+  /* Color & Background */
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+}
+
+.branding_page .seeMoreWork span a:hover {
+  border: 3px solid var(--lightBlue_chub);
+  color: var(--lightBlue_chub);
+}
+
+.branding_page .serviceItems {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 3rem;
+}
+
+.branding_page .serviceItems .serviceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.branding_page .serviceItems .serviceItem:nth-child(odd) {
+  background-color: #f2f2f240;
+}
+
+.branding_page .serviceItems .serviceItem img.service_img {
+  width: 100%;
+  height: auto;
+}
+
+.branding_page .serviceItems .serviceItem .pretitle {
+  grid-area: pretitle;
+  background-color: transparent;
+}
+
+.branding_page .serviceItems .serviceItem .pretitle span {
+  font-family: "Gotham A", "Gotham B";
+  font-size: 9px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 9.9px;
+  text-decoration: white;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+  height: 29.9px;
+  width: 85.2833px;
+  background-color: var(--darkBlue_chub);
+  padding: 10px 15px;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+}
+
+.branding_page .serviceItems .serviceItem .pretitle span:hover {
+  background-color: var(--lightBlue_chub);
+}
+
+.branding_page .serviceItems .serviceItem h3.service_title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 35px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 38.5px;
+  text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+}
+
+.branding_page .serviceItems .serviceItem p.service_description {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25px;
+  text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+}
+
+.branding_page .serviceItems .serviceItem p.service_description::after {
+  content: "...";
+}
+
+.branding_page .serviceItems .serviceItem ul.sublist {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: .5rem;
+  margin: 1% 0;
+}
+
+.branding_page .serviceItems .serviceItem ul.sublist li {
+  font-family: "Gotham A", "Gotham B";
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 20px;
+  text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+  border-bottom: .5px solid #eee;
+}
+
+.branding_page .serviceItems .serviceItem a.learnMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45.9667px;
+  width: 170.033px;
+  border: solid 3px #555;
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 15.9667px;
+  text-decoration: #555555;
+  text-align: center;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-spacing: 0px;
+  color: #555;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+}
+
+.branding_page .serviceItems .serviceItem a.learnMore:hover {
+  color: var(--lightBlue_chub);
+  border-color: var(--lightBlue_chub);
+}
+
+.branding_page .serviceDifferences {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 5rem;
+}
+
+.branding_page .serviceDifferences .serviceDifference {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.branding_page .serviceDifferences .serviceDifference img.service_img {
+  width: 100%;
+  height: auto;
+}
+
+.branding_page .serviceDifferences .serviceDifference h3.service_title {
+  /* Font & Text */
+  font-family: "Libre Baskerville", serif;
+  font-size: 35px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 38.5px;
+  text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+}
+
+.branding_page .serviceDifferences .serviceDifference p.service_description {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25px;
+  text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+}
+
+.branding_page .clientsAndPartners {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.branding_page .clientsAndPartners .brandLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.branding_page .clientsAndPartners .brandLogo img {
+  height: 100px;
+  width: 100px;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .branding_page .clientsAndPartners {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 993px) {
+  .branding_page .digitalCreativeAgency {
+    grid-template-rows: repeat(4, auto);
+    margin: 0 auto;
+    max-width: 1170px;
+    grid-template-areas: "_smallTitle  _bigSubtitle" "_smallTitle  _separator" "_smallTitle _content" "_smallTitle _button";
+  }
+  .branding_page .digitalCreativeAgency .card_smallTitle {
+    max-width: 80%;
+  }
+  .branding_page .digitalCreativeAgency .card_bigSubtitle {
+    max-width: 60%;
+  }
+  .branding_page .featuredWorks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .branding_page .seeMoreWork span {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+    min-height: 150px;
+    grid-gap: 3rem;
+  }
+  .branding_page .seeMoreWork span img {
+    justify-self: end;
+    align-self: center;
+  }
+  .branding_page .seeMoreWork span p {
+    justify-self: start;
+    align-self: center;
+  }
+  .branding_page .seeMoreWork span a {
+    align-self: center;
+    justify-self: start;
+  }
+  .branding_page .serviceItems {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .branding_page .serviceItems .serviceItem ul.sublist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .branding_page .serviceDifferences {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .branding_page .clientsAndPartners {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*
+End: branding_page
 */
 /*
 Start: footer

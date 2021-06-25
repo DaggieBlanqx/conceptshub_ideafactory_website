@@ -38,13 +38,6 @@
             grid-template-rows: repeat(2, auto);
             grid-template-areas: "logoHolder ""heroContent";
             z-index: 2;
-            &>.hamMenu {
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                cursor: pointer;
-                z-index: 5;
-            }
             &>.logoHolder {
                 grid-area: logoHolder;
                 display: grid;
@@ -63,10 +56,46 @@
                 justify-self: start;
                 align-self: center;
                 display: grid;
-                grid-template-rows: repeat(4, auto);
+                grid-template-rows: repeat(5, auto);
                 grid-template-columns: 1fr 3fr;
                 grid-gap: 1rem;
-                grid-template-areas: " _bigSubtitle  _bigSubtitle""_separator _separator""_content _content""_button _button";
+                grid-template-areas: "pretitle pretitle" " _bigSubtitle  _bigSubtitle""_separator _separator""_content _content""_button _button";
+                .pretitle {
+                    grid-area: pretitle;
+                    background-color: transparent;
+                    span {
+                        display: inline-flex;
+                        grid-column: 30px;
+                        font-family: "Gotham A", "Gotham B";
+                        font-size: 9px;
+                        font-style: normal;
+                        font-variant: normal;
+                        font-weight: 500;
+                        letter-spacing: 0.5px;
+                        line-height: 9.9px;
+                        text-decoration: rgb(255, 255, 255);
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: uppercase;
+                        vertical-align: baseline;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        color: rgb(255, 255, 255);
+                        min-height: 30px;
+                        background-color: var(--darkBlue_chub);
+                        transition: .4s cubic-bezier(0.25, .46, .45, .94);
+                        transition-property: all;
+                        align-items: center;
+                        &:hover {
+                            background-color: var(--lightBlue_chub);
+                        }
+                        &::before,
+                        &::after {
+                            content: " ";
+                            width: 10px;
+                        }
+                    }
+                }
                 .card_bigSubtitle {
                     grid-area: _bigSubtitle;
                     color: var(--white_chub);
@@ -101,7 +130,37 @@
 }
 
 .heroMenus {
+    .hamMenu {
+        /*// position: sticky;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        cursor: pointer;
+        z-index: 6;
+        height: 75px;
+        // left: 2382px;    
+        // left: 94%; 
+        top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        */
+        position: absolute;
+        top: 5%;
+        cursor: pointer;
+        z-index: 6;
+        height: 75px;
+        top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        left: 95%;
+    }
     ul.ribbonMenu {
+        position: relative;
+        z-index: 4;
         display: grid;
         grid-template-columns: repeat(auto-fill, 112px);
         grid-auto-flow: column;
@@ -153,6 +212,51 @@
             }
         }
     }
+    .mainMenu {
+        background: red;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        z-index: 5;
+        width: 100%;
+        background-color: #031e32;
+        background-image: linear-gradient(to top left, #123458, #071626);
+        transition: .6s;
+        transform: translateY(-100vh);
+        ul {
+            margin-right: 20%;
+            li {
+                /* Font & Text */
+                font-family: "Libre Baskerville";
+                font-size: 30px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 500;
+                letter-spacing: normal;
+                line-height: 55px;
+                text-align: right;
+                text-indent: 0px;
+                text-transform: capitalize;
+                vertical-align: middle;
+                white-space: normal;
+                word-spacing: 0px;
+                a {
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                    transition: .4s cubic-bezier(0.25, .46, .45, .94);
+                    transition-property: all;
+                    &:hover {
+                        color: var(--lightBlue_chub);
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include media("<=phone") {
@@ -181,56 +285,10 @@
                     margin-top: 35%;
                     width: 60%;
                 }
-                &>.mainMenu {
-                    // background: red;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    height: 100vh;
-                    z-index: 3;
-                    width: 100%;
-                    background-color: #031e32;
-                    background-image: linear-gradient(to top left, #123458, #071626);
-                    transition: .6s;
-                    transform: translateY(-100vh);
-                    ul {
-                        margin-right: 20%;
-                        li {
-                            /* Font & Text */
-                            font-family: "Libre Baskerville";
-                            font-size: 30px;
-                            font-style: normal;
-                            font-variant: normal;
-                            font-weight: 500;
-                            letter-spacing: normal;
-                            line-height: 55px;
-                            text-align: right;
-                            text-indent: 0px;
-                            text-transform: capitalize;
-                            vertical-align: middle;
-                            white-space: normal;
-                            word-spacing: 0px;
-                            a {
-                                text-decoration: none;
-                                color: rgb(255, 255, 255);
-                                transition: .4s cubic-bezier(0.25, .46, .45, .94);
-                                transition-property: all;
-                                &:hover {
-                                    color: var(--lightBlue_chub);
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
     .heroMenus {
-        // background-color: red;
         ul.ribbonMenu {
             display: grid;
             // grid-template-columns: repeat(auto-fill, clamp( 191.75px, 252px, 255.55px));

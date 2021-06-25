@@ -135,6 +135,7 @@ $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
 
 .openMenu {
     transform: translateY(0) !important;
+    background-color: rebeccapurple;
 }
 
 
@@ -227,4 +228,21 @@ $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
     transition-delay: 0s, 0.3s
+}
+
+.stucknow {
+    background: var(--lightBlue_chub) !important;
+    .c-hamburger span {
+        background: var(--darkBlue_chub);
+    }
+    .c-hamburger span::before,
+    .c-hamburger span::after {
+        background-color: var(--darkBlue_chub) !important;
+    }
+    .c-hamburger--htx.is-active {
+        background-color: none !important;
+        span {
+            background-color: none !important;
+        }
+    }
 }

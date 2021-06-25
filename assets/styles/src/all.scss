@@ -34,13 +34,23 @@ Start: home_page
     @import './pages/_home_page.scss';
 }
 
-.template_page {
-    @import './pages/_template_page.scss';
+
+/*
+End: home_page
+*/
+
+
+/*
+Start: branding_page
+*/
+
+.branding_page {
+    @import './pages/_branding_page.scss';
 }
 
 
 /*
-End: home_page
+End: branding_page
 */
 
 
@@ -58,3 +68,7 @@ footer {
 /*
 End: footer
 */
+
+.template_page {
+    @import './pages/_template_page.scss';
+}
