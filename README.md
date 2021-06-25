@@ -1,5 +1,7 @@
 # conceptshub_ideafactory_website
 
+Static Site: https://daggieblanqx.github.io/conceptshub_ideafactory_website/index.html
+
 desktop max 1024px
 tablet max 992px
 mobile max 768px
