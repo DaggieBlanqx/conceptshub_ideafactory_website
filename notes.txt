@@ -13,3 +13,58 @@ Fontawesome: <i class="fab fa-pinterest"></i>
 Fontawesome:  <i class="fab fa-behance-square blue"></i>
 
 <i class="bi bi-linkedin"></i>
+
+
+Links Under Drop Down Menu
+Home: https://www.craftedny.com/
+Work: https://www.craftedny.com/featured-work/
+Contact: https://www.craftedny.com/contact/
+Careers: https://www.craftedny.com/careers/
+Digital Talk: https://www.craftedny.com/digital-talk/
+
+
+Links under Ribbon Menu
+Branding: https://www.craftedny.com/branding/
+Content: https://www.craftedny.com/content/
+Design: https://www.craftedny.com/design/
+Marketing: https://www.craftedny.com/digital-marketing/
+Technology: https://www.craftedny.com/technology/
+
+
+Links under [Main] home footer
+Home: https://www.craftedny.com/
+Work: https://www.craftedny.com/featured-work/
+Contact: https://www.craftedny.com/contact/
+Careers: https://www.craftedny.com/careers/
+Digital Talk: https://www.craftedny.com/digital-talk/
+
+
+Links under [SERVICES] footer menu
+Branding: https://www.craftedny.com/branding/
+Content: https://www.craftedny.com/content/
+Design: https://www.craftedny.com/design/
+Marketing: https://www.craftedny.com/digital-marketing/
+Strategy: https://www.craftedny.com/strategy/
+Technology: https://www.craftedny.com/technology/
+
+
+Links under [Focus] footer menu
+App Design: https://www.craftedny.com/app-design/
+App Development: https://www.craftedny.com/app-development/
+Search Engine Optimization: https://www.craftedny.com/search-engine-optimization/
+Video Production: https://www.craftedny.com/video-production/
+Website Design: https://www.craftedny.com/website-design/
+Web Development: https://www.craftedny.com/web-development/
+
+
+Links under [Industries] footer menu 
+Automotive: https://www.craftedny.com/automotive/
+Beauty and Fashion: https://www.craftedny.com/beauty-and-fashion/
+Education & Government: https://www.craftedny.com/education-government/
+Food and Beverage: https://www.craftedny.com/food-and-beverage/
+Media and Publications: https://www.craftedny.com/media-and-publications/
+Real Estate: https://www.craftedny.com/real-estate/
+Sports and Entertainment: https://www.craftedny.com/sports-and-entertainment/
+Startups: https://www.craftedny.com/startups/
+
+https://www.craftedny.com/sitemap/
