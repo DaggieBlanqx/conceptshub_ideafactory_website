@@ -311,6 +311,19 @@ header .hero {
   width: 100%;
 }
 
+header .hero .noOverlayFilter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: transparent !important;
+  opacity: 1;
+  mix-blend-mode: hard-light;
+}
+
 header .hero .hero_item {
   position: relative;
   height: 100%;
@@ -768,7 +781,6 @@ Start: home_page
 .home_page .seeMoreWork {
   background-color: #031e32;
   background-image: linear-gradient(to top left, #123458, #071626);
-  margin-top: 80px;
 }
 
 .home_page .seeMoreWork span {
@@ -777,9 +789,10 @@ Start: home_page
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
-  min-height: 150px;
+  min-height: 75px;
   grid-gap: 1rem;
-  padding: 30px 0;
+  margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .home_page .seeMoreWork span img {
@@ -1060,13 +1073,9 @@ Start: home_page
     grid-template-columns: repeat(2, 1fr);
   }
   .home_page .seeMoreWork span {
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-content: center;
-    min-height: 150px;
     grid-gap: 3rem;
   }
   .home_page .seeMoreWork span img {
