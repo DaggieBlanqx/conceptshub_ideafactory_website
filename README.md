@@ -27,13 +27,10 @@ mobile max 768px
             "savePath": "./assets/styles/dist/"
         }
     ]
-}```
-
+}
 
 ------------------
 
-
-``json
 
 {
     "workbench.sideBar.location": "right",
@@ -58,4 +55,4 @@ mobile max 768px
     "window.zoomLevel": 1,
     "liveSassCompile.settings.autoprefix": []
 }
-``
+```
