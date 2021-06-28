@@ -8,7 +8,9 @@ mobile max 768px
 
 
 # Configuration for SCSS Live Compiler:
-```{
+```
+
+{
     "workbench.sideBar.location": "right",
     "liveServer.settings.donotShowInfoMsg": true,
     "git.enableSmartCommit": true,
@@ -55,4 +57,5 @@ mobile max 768px
     "window.zoomLevel": 1,
     "liveSassCompile.settings.autoprefix": []
 }
+
 ```
