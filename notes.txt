@@ -57,7 +57,7 @@ Website Design: https://www.craftedny.com/website-design/
 Web Development: https://www.craftedny.com/web-development/
 
 
-Links under [Industries] footer menu 
+Links under [Industries] footer menu
 Automotive: https://www.craftedny.com/automotive/
 Beauty and Fashion: https://www.craftedny.com/beauty-and-fashion/
 Education & Government: https://www.craftedny.com/education-government/
