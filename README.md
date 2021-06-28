@@ -30,10 +30,11 @@ mobile max 768px
         }
     ]
 }
+```
 
 ------------------
 
-
+```
 {
     "workbench.sideBar.location": "right",
     "liveServer.settings.donotShowInfoMsg": true,
@@ -57,5 +58,3 @@ mobile max 768px
     "window.zoomLevel": 1,
     "liveSassCompile.settings.autoprefix": []
 }
-
-```
