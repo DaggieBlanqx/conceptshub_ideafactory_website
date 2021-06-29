@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Featured Work</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' integrity='sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==' crossorigin='anonymous' />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous' />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' integrity='sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==' crossorigin='anonymous'
@@ -18,6 +18,53 @@
 
 <body>
     <header>
+        <div class="loader_logic">
+            <style>
+                .preloader {
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #031e32;
+                    background-image: linear-gradient(to bottom right, #123458, #071626);
+                    text-align: center;
+                    z-index: 9999999
+                }
+                
+                .preloader .spinner {
+                    width: 139px;
+                    height: 49px;
+                    text-align: center;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto
+                }
+                
+                .loader-logo {
+                    float: left
+                }
+                
+                .loader-logo img {
+                    width: 139px;
+                    height: auto
+                }
+            </style>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $(".loader-logo").addClass("animated fadeOut");
+                    $('.preloader').delay(800).fadeOut(800); // set duration in brackets
+                });
+            </script>
+            <div class="preloader">
+                <div class="spinner">
+                    <div class="loader-logo"><img alt="crafted-logo" src="https://www.craftedny.com/wp-content/themes/custom-theme/img/crafted_logo.svg"></div>
+                </div>
+            </div>
+        </div>
         <section class="hero ">
             <figure class="hero_item noOverlayFilter">
                 <!-- <video class="hero_bg" autoplay muted playsinline loop poster="">
