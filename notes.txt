@@ -16,15 +16,15 @@ Fontawesome:  <i class="fab fa-behance-square blue"></i>
 
 
 Links Under Drop Down Menu
-Home: https://www.craftedny.com/
-Work: https://www.craftedny.com/featured-work/
-Contact: https://www.craftedny.com/contact/
+[DONE] Home: https://www.craftedny.com/
+[DONE] Work: https://www.craftedny.com/featured-work/
+[DONE] Contact:  https://www.craftedny.com/contact/
 Careers: https://www.craftedny.com/careers/
 Digital Talk: https://www.craftedny.com/digital-talk/
 
 
 Links under Ribbon Menu
-Branding: https://www.craftedny.com/branding/
+[DONE] Branding: https://www.craftedny.com/branding/
 Content: https://www.craftedny.com/content/
 Design: https://www.craftedny.com/design/
 Marketing: https://www.craftedny.com/digital-marketing/
@@ -32,15 +32,15 @@ Technology: https://www.craftedny.com/technology/
 
 
 Links under [Main] home footer
-Home: https://www.craftedny.com/
-Work: https://www.craftedny.com/featured-work/
-Contact: https://www.craftedny.com/contact/
+[DONE] Home: https://www.craftedny.com/
+[DONE] Work: https://www.craftedny.com/featured-work/
+[DONE] Contact:  https://www.craftedny.com/contact/
 Careers: https://www.craftedny.com/careers/
 Digital Talk: https://www.craftedny.com/digital-talk/
 
 
 Links under [SERVICES] footer menu
-Branding: https://www.craftedny.com/branding/
+[DONE] Branding: https://www.craftedny.com/branding/
 Content: https://www.craftedny.com/content/
 Design: https://www.craftedny.com/design/
 Marketing: https://www.craftedny.com/digital-marketing/

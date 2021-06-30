@@ -72,6 +72,22 @@ Start: Common presets
 }
 
 /*Utility classes*/
+.invisible {
+  visibility: hidden !important;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.inexistent {
+  display: none !important;
+}
+
+.h70vh {
+  height: 70vh !important;
+}
+
 .card_smallTitle {
   /* Font & Text */
   font-family: "Gotham A", "Gotham B";
@@ -307,7 +323,8 @@ Start: Common presets
 Start: header
 */
 header .hero {
-  height: 100vh;
+  overflow: hidden;
+  height: 90vh;
   width: 100%;
 }
 
@@ -658,8 +675,8 @@ End: header
 Start: home_page
 */
 .home_page section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #fff;
 }
 
@@ -781,6 +798,9 @@ Start: home_page
 .home_page .seeMoreWork {
   background-color: #031e32;
   background-image: linear-gradient(to top left, #123458, #071626);
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
 }
 
 .home_page .seeMoreWork span {

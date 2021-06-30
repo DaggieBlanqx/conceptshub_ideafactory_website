@@ -22,6 +22,22 @@ $breakpoints: (phone: 768px, tablet: 992px, desktop: 1024px);
 
 /*Utility classes*/
 
+.invisible {
+    visibility: hidden !important;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+.inexistent {
+    display: none !important;
+}
+
+.h70vh {
+    height: 70vh!important;
+}
+
 .card_smallTitle {
     /* Font & Text */
     font-family: "Gotham A", "Gotham B";
