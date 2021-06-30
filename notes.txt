@@ -18,12 +18,12 @@ Links Under Drop Down Menu
 [DONE] Work: https://www.craftedny.com/featured-work/
 [DONE] Contact:  https://www.craftedny.com/contact/
 [DONE] Careers:  https://www.craftedny.com/careers/
-Digital Talk: https://www.craftedny.com/digital-talk/
+[DONE] Digital Talk: https://www.craftedny.com/digital-talk/
 
 
 Links under Ribbon Menu
 [DONE] Branding: https://www.craftedny.com/branding/
-Content: https://www.craftedny.com/content/
+{DONE] Content: https://www.craftedny.com/content/
 Design: https://www.craftedny.com/design/
 Marketing: https://www.craftedny.com/digital-marketing/
 Technology: https://www.craftedny.com/technology/
@@ -34,7 +34,7 @@ Links under [Main] home footer
 [DONE] Work: https://www.craftedny.com/featured-work/
 [DONE] Contact:  https://www.craftedny.com/contact/
 [DONE] Careers:  https://www.craftedny.com/careers/
-Digital Talk: https://www.craftedny.com/digital-talk/
+[DONE] Digital Talk: https://www.craftedny.com/digital-talk/
 
 
 Links under [SERVICES] footer menu

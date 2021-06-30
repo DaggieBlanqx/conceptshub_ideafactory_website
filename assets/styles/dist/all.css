@@ -689,6 +689,7 @@ header.header-type-2 .hero .noOverlayFilter::after {
   background: linear-gradient(to right, rgba(65, 0, 255, 0.4), rgba(255, 0, 232, 0.3));
   background-color: var(--darkBlue_chub);
   background-color: #071626;
+  background-image: linear-gradient(to bottom right, #123458, #071626);
   opacity: 1;
   mix-blend-mode: hard-light;
 }
@@ -2099,6 +2100,231 @@ Start: careers_page
 
 /*
 End: careers_page
+*/
+/*
+Start: digital-talk_page
+*/
+.digital-talk_page section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
+.digital-talk_page .serviceItems {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 3rem;
+}
+
+.digital-talk_page .serviceItems .serviceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.digital-talk_page .serviceItems .serviceItem:nth-child(odd) {
+  background-color: #f2f2f240;
+}
+
+.digital-talk_page .serviceItems .serviceItem img.service_img {
+  width: 100%;
+  height: auto;
+}
+
+.digital-talk_page .serviceItems .serviceItem .pretitle {
+  grid-area: pretitle;
+  background-color: transparent;
+}
+
+.digital-talk_page .serviceItems .serviceItem .pretitle span {
+  font-family: "Gotham A", "Gotham B";
+  font-size: 9px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 9.9px;
+  text-decoration: white;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: white;
+  height: 29.9px;
+  width: 85.2833px;
+  background-color: var(--darkBlue_chub);
+  padding: 10px 15px;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+}
+
+.digital-talk_page .serviceItems .serviceItem .pretitle span:hover {
+  background-color: var(--lightBlue_chub);
+}
+
+.digital-talk_page .serviceItems .serviceItem h3.service_title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 35px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 38.5px;
+  text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+}
+
+.digital-talk_page .serviceItems .serviceItem p.service_description {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25px;
+  text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+}
+
+.digital-talk_page .serviceItems .serviceItem p.service_description::after {
+  content: "...";
+}
+
+.digital-talk_page .serviceItems .serviceItem ul.sublist {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: .5rem;
+  margin: 1% 0;
+}
+
+.digital-talk_page .serviceItems .serviceItem ul.sublist li {
+  font-family: "Gotham A", "Gotham B";
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 20px;
+  text-decoration: #333333;
+  text-align: left;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #333333;
+  border-bottom: .5px solid #eee;
+}
+
+.digital-talk_page .serviceItems .serviceItem a.learnMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45.9667px;
+  width: 170.033px;
+  border: solid 3px #555;
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 15.9667px;
+  text-decoration: #555555;
+  text-align: center;
+  text-indent: 0px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-spacing: 0px;
+  color: #555;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: all;
+}
+
+.digital-talk_page .serviceItems .serviceItem a.learnMore:hover {
+  color: var(--lightBlue_chub);
+  border-color: var(--lightBlue_chub);
+}
+
+.digital-talk_page .pagination_holder {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.digital-talk_page .pagination_holder .pagination {
+  display: flex;
+}
+
+.digital-talk_page .pagination_holder .pagination li {
+  /* Font & Text */
+  font-family: "Gotham A", "Gotham B";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 21.4333px;
+  text-decoration: white;
+  text-align: start;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
+  background-color: var(--lightBlue_chub);
+  /* Color & Background */
+  border-radius: 10%;
+  /* Box */
+  height: auto;
+  width: auto;
+  margin: 5px;
+  padding: 8px 7px;
+}
+
+.digital-talk_page .pagination_holder .pagination li a {
+  text-decoration: none;
+  color: white;
+}
+
+.digital-talk_page .pagination_holder .pagination li:first-child {
+  background-color: #444;
+}
+
+@media (min-width: 993px) {
+  .digital-talk_page .serviceItems {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .digital-talk_page .serviceItems .serviceItem:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+  .digital-talk_page .serviceItems .serviceItem ul.sublist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*
+End: digital-talk_page
 */
 /*
 Start: footer

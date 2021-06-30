@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="https://www.craftedny.com/wp-content/themes/custom-theme/ico/favicon.ico">
     <link rel="icon" href="https://www.craftedny.com/wp-content/uploads/2020/12/cropped-c-logo-500x500-1-32x32.jpg" sizes="32x32">
     <link rel="icon" href="https://www.craftedny.com/wp-content/uploads/2020/12/cropped-c-logo-500x500-1-192x192.jpg" sizes="192x192">
-    <title>Digital Talk NYC | Creative Marketing Resources | Crafted</title>
+    <title>Content Inspiration | Content Marketing NYC | Crafted.</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' integrity='sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==' crossorigin='anonymous' />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous' />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' integrity='sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==' crossorigin='anonymous'
@@ -95,10 +95,10 @@
                             </a> -->
 
                             <div class="workWithUs">
-                                <div class="card_smallTitle">Digital Marketing Talk</div>
-                                <div class="card_bigSubtitle">Digital Talk</div>
+                                <div class="card_smallTitle">Digital Talk</div>
+                                <div class="card_bigSubtitle">Content Inspiration</div>
                                 <div class="card_separator"></div>
-                                <div class="card_content">Stay up to date on all that is digital marketing, the latest trends in design and development, and what's happening in all of our digital endeavors.</div>
+                                <div class="card_content">Content Inspiration comes from various mediums. Here are a few articles about the importance of content from a branding and marketing perspective.</div>
                                 <button class="card_button invisible">Learn More</button>
                             </div>
                         </div>
@@ -330,6 +330,14 @@
         <footer>
             <section class="firstRow">
 
+                <div class="contactUs">
+                    <div class="card_smallTitle">Contact Us</div>
+                    <div class="card_bigSubtitle">Let’s work together</div>
+                    <div class="card_separator"></div>
+                    <div class="card_content">We're passionate about innovation, brilliant ideas and the execution that brings it all together in one beautiful experience. If you are too, call or send us an email to get started.</div>
+                    <a class="card_button">Contact Us</a>
+                </div>
+
                 <div class="findUs">
                     <figure>
                         <img class="cityThumbnail" src="https://www.craftedny.com/wp-content/uploads/2020/07/crafted_miami_icon-5.svg" alt="">
@@ -518,66 +526,5 @@
             }
         })
     </script>
-    <script>
-        (function() {
-
-            "use strict";
-            var hamMenu = document.querySelector('.c-hamburger')
-            toggleHandler(hamMenu);
-
-            function toggleHandler(toggle) {
-                toggle.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    if (this.classList.contains("is-active")) {
-                        document.querySelector('.mainMenu').classList.remove('openMenu');
-                        this.classList.remove("is-active");
-                    } else {
-                        document.querySelector('.mainMenu').classList.add('openMenu');
-                        this.classList.add("is-active");
-                    };
-                });
-            }
-
-        })();
-    </script>
-    <script>
-        function css(element, style) {
-            for (const property in style)
-                element.style[property] = style[property];
-        }
-
-        var sticky = new Sticky('#sticker');
-        var sticky3 = new Sticky('#sticker3');
-        var sticky2 = new Sticky('#sticker2', {
-            // marginTop: 10
-        });
-
-        var sticker2Position = document.querySelector('#sticker2').getBoundingClientRect();
-        var stickerPosition = document.querySelector('#sticker').getBoundingClientRect();
-
-        window.addEventListener('scroll', (e) => {
-
-            var windowHeight = window.innerHeight;
-            var windowYOffset = window.pageYOffset;
-
-            if (windowYOffset > windowHeight) {
-                console.log(`Pin it! ${Math.random()}`);
-                // document.querySelector('#sticker2').style = "background:purple;";
-
-                css(document.querySelector('#sticker2'), {
-                    // 'background-color': 'purple',
-                    'width': '105% !important'
-                });
-
-                document.querySelector('.hamMenu').classList.add('stucknow');
-            } else {
-                css(document.querySelector('#sticker2'), {
-                    'background-color': 'transparent',
-                });
-                document.querySelector('.hamMenu').classList.remove('stucknow');
-            }
-        })
-    </script>
-
 
 </html>

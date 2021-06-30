@@ -1,0 +1,223 @@
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #fff;
+}
+
+.serviceItems {
+    @include containWithinPercent(90%);
+    display: grid;
+    grid-gap: 3rem;
+    .serviceItem {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &:nth-child(odd) {
+            background-color: #f2f2f240;
+        }
+        img.service_img {
+            width: 100%;
+            height: auto;
+            // margin-bottom: 20px;
+        }
+        .pretitle {
+            grid-area: pretitle;
+            background-color: transparent;
+            span {
+                font-family: "Gotham A", "Gotham B";
+                font-size: 9px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                line-height: 9.9px;
+                text-decoration: rgb(255, 255, 255);
+                text-align: left;
+                text-indent: 0px;
+                text-transform: uppercase;
+                vertical-align: baseline;
+                white-space: normal;
+                word-spacing: 0px;
+                color: rgb(255, 255, 255);
+                height: 29.9px;
+                width: 85.2833px;
+                background-color: var(--darkBlue_chub);
+                padding: 10px 15px;
+                transition: .4s cubic-bezier(0.25, .46, .45, .94);
+                transition-property: all;
+                &:hover {
+                    background-color: var(--lightBlue_chub);
+                }
+            }
+        }
+        h3.service_title {
+            font-family: "Libre Baskerville", serif;
+            font-size: 35px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            letter-spacing: -1px;
+            line-height: 38.5px;
+            text-decoration: rgb(51, 51, 51);
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            vertical-align: baseline;
+            white-space: normal;
+            word-spacing: 0px;
+            color: rgb(51, 51, 51);
+        }
+        p.service_description {
+            /* Font & Text */
+            font-family: "Gotham A", "Gotham B";
+            font-size: 15px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            line-height: 25px;
+            text-decoration: rgb(51, 51, 51);
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            vertical-align: baseline;
+            white-space: normal;
+            word-spacing: 0px;
+            color: rgb(51, 51, 51);
+            &::after {
+                content: "...";
+            }
+        }
+        ul.sublist {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: .5rem;
+            margin: 1% 0;
+            li {
+                font-family: "Gotham A", "Gotham B";
+                font-size: 14px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                line-height: 20px;
+                text-decoration: rgb(51, 51, 51);
+                text-align: left;
+                text-indent: 0px;
+                text-transform: none;
+                vertical-align: baseline;
+                white-space: normal;
+                word-spacing: 0px;
+                color: rgb(51, 51, 51);
+                border-bottom: .5px solid #eee;
+            }
+        }
+        a.learnMore {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 45.9667px;
+            width: 170.033px;
+            border: solid 3px #555;
+            /* Font & Text */
+            font-family: "Gotham A", "Gotham B";
+            font-size: 12px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            letter-spacing: normal;
+            line-height: 15.9667px;
+            text-decoration: rgb(85, 85, 85);
+            text-align: center;
+            text-indent: 0px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            white-space: nowrap;
+            word-spacing: 0px;
+            color: #555;
+            transition: .4s cubic-bezier(0.25, .46, .45, .94);
+            transition-property: all;
+            &:hover {
+                color: var(--lightBlue_chub);
+                border-color: var(--lightBlue_chub);
+            }
+        }
+    }
+}
+
+.pagination_holder {
+    @include containWithinPercent(90%);
+    padding-top: 0;
+    // padding-bottom: 0;
+    // background-color: red;
+    display: flex;
+    flex-direction: row-reverse;
+    .pagination {
+        display: flex;
+        li {
+            /* Font & Text */
+            font-family: "Gotham A", "Gotham B";
+            font-size: 15px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            letter-spacing: normal;
+            line-height: 21.4333px;
+            text-decoration: rgb(255, 255, 255);
+            text-align: start;
+            text-indent: 0px;
+            text-transform: none;
+            vertical-align: baseline;
+            white-space: normal;
+            word-spacing: 0px;
+            background-color: var(--lightBlue_chub);
+            /* Color & Background */
+            border-radius: 10%;
+            /* Box */
+            height: auto;
+            width: auto;
+            margin: 5px;
+            padding: 8px 7px;
+            a {
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+            &:first-child {
+                background-color: #444;
+            }
+        }
+    }
+}
+
+@include media("<=phone") {
+    //every device smaller than phone
+}
+
+@include media(">phone", "<=tablet") {
+    //every device between phone and tablet
+}
+
+@include media(">tablet") {
+    //every device bigger than tablets
+    .serviceItems {
+        grid-template-columns: repeat(3, 1fr);
+        .serviceItem {
+            &:nth-child(1) {
+                // background-color: red;
+                grid-column: 1 / -1;
+            }
+            // &:nth-child(2) {
+            //     grid-column: 1/ -2;
+            // }
+            // &:nth-child(3) {
+            //     grid-column: 1/ -2;
+            // }
+            // &:last-child {
+            //     grid-column: 2/ -1;
+            // }
+            ul.sublist {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
