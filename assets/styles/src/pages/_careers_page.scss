@@ -1,0 +1,96 @@
+    section {
+        // padding-top: 30px;
+        padding-bottom: 20px;
+        background-color: #fff;
+        // border: solid red 1px;
+    }
+    
+    .firstRow {
+        // background-color: red;
+        .workWithUs {
+            margin: 0 var(--bothVerticalSidesBodyPadding);
+            padding: 50px 15px;
+            display: grid;
+            // grid-template-rows: 3fr 1fr 3fr 3fr;
+            grid-template-rows: repeat(5, auto-fit);
+            grid-template-columns: 1fr 3fr;
+            grid-gap: 1rem;
+            grid-template-areas: "_smallTitle _smallTitle"" _bigSubtitle  _bigSubtitle""_separator _separator""_content _content""_button _button";
+            .card_smallTitle {
+                grid-area: _smallTitle;
+            }
+            .card_separator {
+                grid-area: _separator;
+            }
+            .card_bigSubtitle {
+                grid-area: _bigSubtitle;
+            }
+            .card_content {
+                grid-area: _content;
+            }
+            .card_button {
+                grid-area: _button;
+            }
+        }
+    }
+    
+    .jobLists {
+        .jobItem {
+            margin: 0 var(--bothVerticalSidesBodyPadding);
+            padding: 30px 15px;
+            display: grid;
+            // grid-template-rows: 3fr 1fr 3fr 3fr;
+            grid-template-rows: repeat(5, auto-fit);
+            grid-template-columns: 1fr 3fr;
+            grid-gap: 1rem;
+            grid-template-areas: "_smallTitle _smallTitle"" _bigSubtitle  _bigSubtitle""_separator _separator""_content _content""_button _button";
+            .card_smallTitle {
+                grid-area: _smallTitle;
+            }
+            .card_separator {
+                grid-area: _separator;
+            }
+            .card_bigSubtitle {
+                grid-area: _bigSubtitle;
+                font-size: 35px;
+            }
+            .card_content {
+                grid-area: _content;
+            }
+            .card_button {
+                grid-area: _button;
+                width: 106px;
+            }
+            &:nth-child(odd) {
+                background-color: #eee;
+            }
+        }
+    }
+    
+    @include media("<=phone") {
+        //every device smaller than phone
+    }
+    
+    @include media(">phone", "<=tablet") {
+        //every device between phone and tablet
+    }
+    
+    @include media(">tablet") {
+        //every device bigger than tabletssss
+        .firstRow {
+            .workWithUs {
+                grid-template-rows: repeat(4, auto);
+                margin: 0 auto;
+                max-width: 1170px;
+                grid-template-areas: "_smallTitle  _bigSubtitle""_smallTitle  _separator""_smallTitle _content""_smallTitle _button";
+            }
+        }
+        .jobLists {
+            .jobItem {
+                grid-template-rows: repeat(4, auto);
+                margin: 0 auto;
+                max-width: 1170px;
+                grid-template-areas: "_smallTitle  _bigSubtitle""_smallTitle  _separator""_smallTitle _content""_smallTitle _button";
+            }
+        }
+    }

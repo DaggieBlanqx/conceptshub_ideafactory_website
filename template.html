@@ -15,7 +15,7 @@
 </head>
 
 <body class="template_page">
-    <header>
+    <header class="header-type-1">
         <div class="loader_logic">
             <style>
                 .preloader {
@@ -357,5 +357,65 @@
         </section>
     </footer>
 </body>
+<script>
+    (function() {
+
+        "use strict";
+        var hamMenu = document.querySelector('.c-hamburger')
+        toggleHandler(hamMenu);
+
+        function toggleHandler(toggle) {
+            toggle.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (this.classList.contains("is-active")) {
+                    document.querySelector('.mainMenu').classList.remove('openMenu');
+                    this.classList.remove("is-active");
+                } else {
+                    document.querySelector('.mainMenu').classList.add('openMenu');
+                    this.classList.add("is-active");
+                };
+            });
+        }
+
+    })();
+</script>
+<script>
+    function css(element, style) {
+        for (const property in style)
+            element.style[property] = style[property];
+    }
+
+    var sticky = new Sticky('#sticker');
+    var sticky3 = new Sticky('#sticker3');
+    var sticky2 = new Sticky('#sticker2', {
+        // marginTop: 10
+    });
+
+    var sticker2Position = document.querySelector('#sticker2').getBoundingClientRect();
+    var stickerPosition = document.querySelector('#sticker').getBoundingClientRect();
+
+    window.addEventListener('scroll', (e) => {
+
+        var windowHeight = window.innerHeight;
+        var windowYOffset = window.pageYOffset;
+
+        if (windowYOffset > windowHeight) {
+            console.log(`Pin it! ${Math.random()}`);
+            // document.querySelector('#sticker2').style = "background:purple;";
+
+            css(document.querySelector('#sticker2'), {
+                // 'background-color': 'purple',
+                'width': '105% !important'
+            });
+
+            document.querySelector('.hamMenu').classList.add('stucknow');
+        } else {
+            css(document.querySelector('#sticker2'), {
+                'background-color': 'transparent',
+            });
+            document.querySelector('.hamMenu').classList.remove('stucknow');
+        }
+    })
+</script>
 
 </html>

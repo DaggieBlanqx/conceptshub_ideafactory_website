@@ -3,9 +3,7 @@
 
 <i class="bi bi-facebook"></i>
 
-
 <i class="bi bi-instagram"></i>
-
 
 Fontawesome: <i class="fab fa-pinterest"></i> 
 
@@ -19,7 +17,7 @@ Links Under Drop Down Menu
 [DONE] Home: https://www.craftedny.com/
 [DONE] Work: https://www.craftedny.com/featured-work/
 [DONE] Contact:  https://www.craftedny.com/contact/
-Careers: https://www.craftedny.com/careers/
+[DONE] Careers:  https://www.craftedny.com/careers/
 Digital Talk: https://www.craftedny.com/digital-talk/
 
 
@@ -35,7 +33,7 @@ Links under [Main] home footer
 [DONE] Home: https://www.craftedny.com/
 [DONE] Work: https://www.craftedny.com/featured-work/
 [DONE] Contact:  https://www.craftedny.com/contact/
-Careers: https://www.craftedny.com/careers/
+[DONE] Careers:  https://www.craftedny.com/careers/
 Digital Talk: https://www.craftedny.com/digital-talk/
 
 

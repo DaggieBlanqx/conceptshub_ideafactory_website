@@ -15,9 +15,12 @@ Start: header
 */
 
 header {
-    // display: flex;
-    // flex-direction: column;
-    @import './globals/header';
+    &.header-type-1 {
+        @import './globals/header-type-1';
+    }
+    &.header-type-2 {
+        @import './globals/header-type-2';
+    }
 }
 
 
@@ -51,6 +54,20 @@ Start: branding_page
 
 /*
 End: branding_page
+*/
+
+
+/*
+Start: careers_page
+*/
+
+.careers_page {
+    @import './pages/_careers_page.scss';
+}
+
+
+/*
+End: careers_page
 */
 
 
